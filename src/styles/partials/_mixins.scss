@@ -1,0 +1,19 @@
+@mixin position($top, $left) {
+	position: absolute;
+	top     : $top;
+	left    : $left
+}
+
+@mixin size($height, $width) {
+	height: $height;
+	width : $width;
+}
+
+$conectorHeigth: 50px;
+$conectorWidth : 220px;
+
+$flagHeightMobile:55px;
+$flagWidthMobile :60px;
+
+$conectorHeigthMobile:60px;
+$conectorWidthMobile : 115px;

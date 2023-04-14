@@ -1,0 +1,96 @@
+ @import './partials/general';
+
+ .client {
+ 	background-color: #E7EDF9;
+ 	padding-bottom  : 2em;
+
+ 	&__testimony {
+ 		width         : 100%;
+ 		text-align    : center;
+ 		font-size     : 2.6rem;
+ 		gap           : 10px;
+ 		display       : flex;
+ 		flex-direction: column;
+ 		margin-top    : 32px;
+
+ 		p {
+ 			margin: 0;
+ 		}
+ 	}
+
+ 	.swiper {
+ 		padding-bottom: 70px !important;
+ 		padding-top   : 40px !important;
+
+ 		.swiper-pagination-clickable {
+ 			.swiper-pagination-bullet-active {
+ 				background-color: $secondary-color !important;
+ 				width           : 20px;
+ 				height          : 20px;
+ 			}
+
+ 			.swiper-pagination-bullet {
+ 				background-color: #0000;
+ 				border          : 3px solid $secondary-color;
+ 				width           : 20px;
+ 				height          : 20px;
+ 			}
+ 		}
+ 	}
+
+ 	.swiper-wrapper {
+ 		margin-left: 16px;
+
+ 		@media screen and (min-width: $desktop-small) {
+ 			margin: 0;
+ 		}
+
+ 		.swiper-button {
+
+ 			&-prev,
+ 			&-next {
+ 				display: none;
+
+ 				@media screen and (min-width: $tablet) {
+ 					display: flex;
+ 				}
+
+ 				&::after {
+ 					color: $secondary-color;
+ 				}
+ 			}
+ 		}
+
+ 		.swiper-slide {
+ 			height         : 35px !important;
+ 			display        : flex;
+ 			align-items    : center;
+ 			justify-content: center;
+ 			margin-top     : 20px;
+
+ 			border-radius: 4px;
+
+ 			@media screen and (min-width : $tablet) {
+ 				height: 30px !important;
+ 			}
+
+ 		}
+
+ 		flex-direction: initial;
+ 		align-items   : baseline;
+
+ 		.client__image {
+ 			img {
+
+ 				display        : flex;
+ 				justify-content: center;
+ 				object-fit     : contain;
+
+ 			}
+ 		}
+ 	}
+
+ 	.containerGrid {
+ 		padding-top: 30px;
+ 	}
+ }

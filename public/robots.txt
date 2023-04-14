@@ -1,0 +1,13 @@
+User-agent: *
+Sitemap: https://itglobers.com/sitemap.xml
+Allow: /
+Disallow: /error/
+Disallow: /error404/
+Disallow: /admin/
+Disallow: /search/
+Disallow: /user/register/
+Disallow: /user/password/
+Disallow: /user/login/
+Disallow: /user/logout/
+User-agent: MJ12bot
+Disallow: /

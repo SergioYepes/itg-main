@@ -1,0 +1,175 @@
+@import './partials/general';
+
+.value-proposal {
+  max-width      : 1440px;
+  width          : 100%;
+  display        : flex;
+  justify-content: center;
+  flex-wrap      : wrap;
+  transform      : translateY(93px);
+  position       : relative;
+  margin-bottom  : 14rem;
+
+  @media screen and (max-width: $desktop-small) {
+    margin-bottom: 8rem;
+  }
+
+  @media screen and (min-width: $wide-screen) {
+    margin       : 0 auto;
+    max-width    : $wide-screen;
+    margin-bottom: 19rem;
+  }
+
+  &__container {
+    justify-content: center;
+
+    @media screen and (min-width: $desktop-small) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__copy {
+    position  : relative;
+    margin-top: 2.4rem;
+    width     : 100%;
+    z-index   : 1;
+
+    @media screen and (min-width: $desktop-small) {
+      max-width: 512px;
+      margin   : 6rem 0;
+    }
+
+    @media screen and (min-width: $wide-screen) {
+      margin   : 7.2rem 0;
+      max-width: 50%;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+
+    @media screen and (min-width: $desktop-small) {
+      max-width: 563px;
+      position : absolute;
+      right    : 20px;
+      top      : -40px;
+    }
+
+    @media screen and (min-width: $desktop-large) {
+      right: 100px;
+    }
+
+    @media screen and (min-width: $wide-screen) {
+      max-width: 700px;
+      right    : 20px;
+    }
+  }
+
+  &__group {
+    margin-bottom  : 3rem;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    flex-direction : column;
+
+    @media screen and (min-width: $tablet) {
+      display        : flex;
+      justify-content: center;
+      align-items    : center;
+    }
+
+    @media screen and (min-width: $desktop-small) {
+      max-width      : 700px;
+      display        : flex;
+      justify-content: flex-start;
+      align-items    : flex-start;
+    }
+  }
+
+  &__title {
+    font-size  : 2.4rem;
+    padding    : 0;
+    text-align : center;
+    font-weight: 700;
+    margin     : 0;
+
+    @media screen and (min-width: $desktop-small) {
+      font-size  : 3.2rem;
+      line-height: 3.6rem;
+      text-align : left;
+    }
+
+    @media screen and (min-width: $wide-screen) {
+      font-size  : 3.5rem;
+      line-height: 4.8rem;
+      text-align : left;
+    }
+
+    &--color-1 {
+      color: $dark-color-2;
+    }
+
+    &--color-2 {
+      color: $tertiary-color;
+    }
+
+    &--color-3 {
+      color: $secondary-color;
+    }
+  }
+
+  &__paragraph {
+    font-size     : 1.2rem;
+    text-transform: uppercase;
+    text-align    : center;
+    color         : $dark-color-2;
+    margin-bottom : 3.2rem;
+
+    p {
+      margin   : 0 60px;
+      font-size: 14px;
+
+      @media screen and (min-width: 768px) {
+        margin   : 0;
+        font-size: 19px;
+      }
+    }
+
+    @media screen and (min-width: $desktop-small) {
+      font-size      : 1.6rem;
+      margin-top     : 0;
+      margin-bottom  : 4.6rem;
+      text-align-last: left;
+    }
+
+    & strong {
+      background             : $itg-gradient;
+      -webkit-background-clip: text;
+      background-clip        : text;
+      -webkit-text-fill-color: transparent;
+      font-size              : 1.5rem;
+
+      @media screen and (min-width: 768px) {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  &__button-group {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    gap           : 1.6rem;
+    padding       : 0 1.6rem 2.4rem;
+
+    @media screen and (min-width: $desktop-small) {
+      flex-direction : row;
+      justify-content: flex-start;
+      padding        : 0;
+    }
+  }
+
+  &__picture--img {
+    object-fit: cover;
+  }
+}

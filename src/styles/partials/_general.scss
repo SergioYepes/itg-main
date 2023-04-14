@@ -1,0 +1,52 @@
+@import 'variables';
+@import 'queries';
+@import 'buttons';
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin : 0;
+	padding: 0;
+}
+
+.container {
+	width    : 100%;
+	display  : flex;
+	max-width: 1024px;
+	margin   : 0 auto;
+
+	&__width {
+		max-width  : 1240px;
+		display    : flex;
+		align-items: center;
+	}
+}
+
+.swiper {
+	padding-bottom: 3rem !important;
+}
+
+.swiper-pagination {
+	transform: translateY(1rem);
+}
+
+.swiper-button {
+
+	&-prev,
+	&-next {
+		&::after {
+			font-size: 2rem;
+		}
+	}
+
+	&-prev {
+		transform: translateX(-1.4rem);
+	}
+
+	&-next {
+		transform: translateX(1.4rem);
+	}
+}

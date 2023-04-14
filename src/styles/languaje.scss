@@ -1,0 +1,181 @@
+@import './partials/general';
+
+.container__language {
+	display: none;
+
+	@media screen and (min-width:$desktop-large) {
+		display        : flex;
+		justify-content: flex-end;
+		margin-right   : 20px;
+		position       : relative;
+
+		& .selection_languaje {
+			position: absolute;
+			top     : 108px;
+			right   : 150px;
+		}
+
+		& .container__translate {
+			position: absolute;
+			top     : 100px;
+			z-index : 30;
+		}
+	}
+}
+
+
+.selection_languaje p {
+	color       : #480095;
+	margin-right: 30px;
+	margin-top  : 10px;
+}
+
+.languaje__select {
+	width           : 200px;
+	background-color: #480095;
+	border-radius   : 40px;
+	color           : #ffffff;
+	font-size       : 16px;
+	line-height     : 18px;
+	border          : none;
+}
+
+
+.selected-box {
+	display       : flex;
+	width         : 140px;
+	flex-direction: column;
+
+}
+
+
+.selected-box .options-container {
+	background-color: #480095;
+	color           : #ffffff;
+	max-height      : 0;
+	width           : 100%;
+	opacity         : 0;
+	transition      : all 0.5s;
+	overflow        : hidden;
+	border-radius   : 0px 0px 15px 15px;
+	margin-top      : -16px;
+	padding-bottom  : 5px;
+	padding-top     : 20px;
+	order           : 1;
+}
+
+.selected {
+	background-color: #480095;
+	color           : #ffffff;
+	position        : relative;
+	order           : 0;
+
+}
+
+.selected:active {
+	background-color: #ffffff;
+	color           : #480095;
+	background      : url('../assets/img/down-chevron-svgrepo-com-purple.svg');
+}
+
+.selected::after {
+	content          : "";
+	background       : url('../assets/img/down-chevron-svgrepo-com.svg');
+	background-size  : contain;
+	background-repeat: no-repeat;
+	position         : absolute;
+	height           : 100%;
+	width            : 16px;
+	right            : 12px;
+	top              : 11px;
+	color            : #ffffff;
+	transition       : all 0.4s;
+}
+
+.selected-box .options-container.active {
+	max-height: 140px;
+	opacity   : 1;
+}
+
+.selected-box .options-container.active+.selected::after {
+	transform: rotateX(180deg);
+	top      : -15px;
+}
+
+.selected-box .option,
+.selected {
+	padding      : 7px 24px;
+	cursor       : pointer;
+	border-radius: 40px;
+	height       : 40px;
+}
+
+.selected-box .option:hover {
+	background-color: #ffffff;
+	color           : #480095;
+	border-radius   : 10px;
+}
+
+.selected-box label {
+	cursor: pointer;
+}
+
+.selected-box .option .radio {
+	display: none;
+}
+
+.spanish_value,
+.english_value {
+	display        : flex;
+	justify-content: flex-start;
+	align-items    : center;
+	margin         : 0
+}
+
+
+.spanish_value::before {
+	content      : url('../assets/img/spain-flag.png');
+	width        : 16px;
+	height       : 16px;
+	margin-right : 10px;
+	margin-right : 20px;
+	margin-bottom: 5px;
+	padding-right: 15px;
+}
+
+.english_value::before {
+	content      : url('../assets/img/usa-flag.png');
+	width        : 16px;
+	height       : 16px;
+	margin-right : 10px;
+	margin-right : 20px;
+	margin-bottom: 5px;
+	padding-right: 15px;
+}
+
+
+
+.container_mobile_translate {
+	background-color: #FF943F;
+	display         : flex !important;
+	justify-content : center;
+	align-items     : center;
+	height          : 53px;
+	margin-bottom   : 40px;
+	margin-top      : 10px;
+	padding-left    : 10px !important;
+
+	@media screen and (min-width:$tablet) {
+		display: none;
+	}
+
+	@media screen and (min-width:$desktop-large) {
+		display: none !important;
+	}
+}
+
+.container__translate {
+	margin-top: 6px;
+	display   : flex;
+	align-self: stretch;
+}

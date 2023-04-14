@@ -1,0 +1,28 @@
+@import './variables';
+
+.button {
+	font-size       : 1.4rem;
+	color           : white;
+	font-weight     : 500;
+	text-decoration : none;
+	width           : 100%;
+	background-color: $main-color;
+	display         : flex;
+	justify-content : center;
+	align-items     : center;
+	height          : 4.8rem;
+	border-radius   : 8px;
+	border          : 1px solid $main-color;
+	max-width       : 28rem;
+
+	@media screen and (min-width: $desktop-small) {
+		font-size: 1.6rem;
+		max-width: 26rem;
+	}
+
+	&--light {
+		background: rgba(72, 0, 149, 0.16);
+		color     : #480095;
+		border    : transparent;
+	}
+}

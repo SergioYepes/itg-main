@@ -1,0 +1,274 @@
+@import './partials/general';
+
+.contact-cont {
+	padding-top     : 100px;
+	background-color: #E7EDF9;
+
+	.custom-file-upload {
+		display         : inline-block;
+		padding         : 8px 12px;
+		margin          : 4px;
+		cursor          : pointer;
+		border          : 1px solid #ccc;
+		border-radius   : 4px;
+		background-color: #E2E3E5;
+		color           : #333;
+		font-size       : 16px;
+		font-weight     : bold;
+		text-align      : center;
+
+		@media screen and (max-width: $desktop-small) {
+			padding: 12px 12px;
+		}
+	}
+
+	.custom-file-upload:hover {
+		background-color: #e6e6e6;
+	}
+
+	.container__input--file {
+		width        : 288px;
+		margin       : auto;
+		height       : 56px;
+		left         : 1px;
+		top          : 480px;
+		background   : #FFFFFF;
+		border       : 1px solid #A4AFBA;
+		border-radius: 8px;
+		display      : flex;
+
+		@media screen and (min-width: $tablet) {
+			width: 408px;
+
+		}
+
+		.input__file--chargedPlaceholder {
+			display        : flex;
+			width          : 90%;
+			justify-content: flex-start;
+			gap            : 20px;
+			margin-left    : 10px;
+
+			p {
+				overflow : hidden;
+				max-width: 145px;
+
+				@media screen and (min-width: $tablet) {
+					max-width: 250px;
+				}
+			}
+		}
+	}
+
+	input[type="file"] {
+		display: none;
+	}
+
+	.contact-imgCont {
+		.contact-level-title {
+			position     : relative;
+			text-align   : center;
+			font-size    : 28px;
+			margin-bottom: 70px;
+			z-index      : 20;
+
+			@media screen and (min-width: $desktop-small) {
+				width      : 595px;
+				height     : 106px;
+				font-family: "Montserrat";
+				font-style : normal;
+				font-weight: 700;
+				font-size  : 48px;
+				line-height: 53px;
+				color      : #1D2734;
+				position   : relative;
+				left       : 10%;
+				text-align : start;
+			}
+
+			@media screen and (min-width: $tablet) {
+				font-size: 50px;
+			}
+
+			@media screen and (min-width: $wide-screen) {
+				left: 15%;
+			}
+		}
+
+		.contact-name {
+			text-align: center;
+		}
+
+		.contact__form--and--image {
+			@media screen and (min-width: $desktop-small) {
+				display        : flex;
+				justify-content: space-evenly;
+			}
+
+			.container__image {
+				position       : relative;
+				display        : flex;
+				justify-content: center;
+				align-items    : center;
+				top            : 0;
+				left           : 0;
+				right          : 0;
+				bottom         : 0;
+				margin         : auto;
+				background     : #FFFFFF;
+				border-radius  : 41px 41px 0px 0px;
+				width          : 238px;
+				height         : 355px;
+
+				@media screen and (min-width: $desktop-small) {
+					width : 483px !important;
+					height: 529px;
+					top   : 87px;
+				}
+
+				@media screen and (min-width: $tablet) {
+					width: 340px;
+				}
+
+				.circulo {
+					position     : absolute;
+					width        : 85px;
+					height       : 85px;
+					left         : -40px;
+					top          : -40px;
+					background   : #FF943F;
+					border-radius: 50%;
+
+					@media screen and (min-width: $tablet) {
+						width : 115px;
+						height: 115px;
+					}
+
+					@media screen and (min-width: $desktop-small) {
+						top: 315px;
+					}
+				}
+
+			}
+		}
+
+		.contact-circle {
+			position     : absolute;
+			width        : 75px;
+			height       : 75px;
+			left         : 3px;
+			top          : 244px;
+			z-index      : 3;
+			border-radius: 60px;
+			background   : #FF943F;
+		}
+
+		.form--image {
+			width  : 211.99px;
+			height : 355px;
+			display: flex;
+			margin : 0 auto;
+
+			@media screen and (min-width: $desktop-small) {
+				width   : 378px;
+				height  : 633px;
+				position: absolute;
+				bottom  : 0px;
+				left    : 0;
+				right   : 0;
+			}
+		}
+
+		.contact-imgBG {
+			position     : absolute;
+			width        : 238px;
+			height       : 296px;
+			left         : 41px;
+			top          : 293px;
+			z-index      : 2;
+			background   : #FFFFFF;
+			border-radius: 22.9937px 22.9937px 0px 0px;
+		}
+
+		.contact-comunicate {
+			display       : flex;
+			flex-direction: row;
+			align-items   : center;
+			padding       : 6.1425px;
+			gap           : 6.14px;
+			position      : absolute;
+			width         : 214.29px;
+			height        : 60.28px;
+			background    : #FFFFFF;
+			box-shadow    : 1.68246px 4.48657px 8.97314px rgb(29 39 52 / 15%);
+			border-radius : 6.35015px;
+			z-index       : 4;
+			top           : 255px;
+			left          : 0;
+			bottom        : 0%;
+			right         : 0;
+			margin        : auto;
+
+			@media screen and (min-width: $desktop-small) {
+				left: 350px;
+				top : -520px;
+			}
+
+			h1 {
+				width      : 202px;
+				height     : 48px;
+				font-family: 'Lato';
+				font-style : normal;
+				font-weight: 300;
+				font-size  : 20px;
+				line-height: 24px;
+				color      : #1D2734;
+				flex       : none;
+				order      : 0;
+				flex-grow  : 0;
+			}
+
+			input {
+				background-color: #FF943F;
+			}
+		}
+
+	}
+
+	.container__language {
+		& .selection_languaje {
+			top: -10px;
+		}
+
+		& .container__translate {
+			top: 40px;
+		}
+	}
+
+	.contact-select {
+		width        : 138px;
+		height       : 56px;
+		background   : #FFFFFF;
+		border       : 1px solid #A4AFBA;
+		border-radius: 8px;
+	}
+
+	.contact-input {
+		box-sizing   : border-box;
+		width        : 288px;
+		height       : 56px;
+		background   : #FFFFFF;
+		border       : 1px solid #A4AFBA;
+		border-radius: 8px;
+		font-family  : 'Lato';
+		font-style   : normal;
+		font-weight  : 400;
+		font-size    : 16px;
+		line-height  : 18px;
+		color        : #8F99A4;
+
+		@media screen and (min-width: $tablet) {
+			width: 408px;
+		}
+	}
+}
