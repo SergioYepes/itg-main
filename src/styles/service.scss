@@ -324,8 +324,25 @@
 
 .container.service__container {
   max-width: 90vw;
-  height   : 975px;
-
+  height   : 830px;
+@media screen and (min-width: 495px) {
+  height   : 870px;
+}
+@media screen and (min-width: 543px) {
+  height   : 910px;
+}
+@media screen and (min-width: 597px) {
+  height   : 950px;
+}
+@media screen and (min-width: 636px) {
+  height   : 990px;
+}
+@media screen and (min-width: 690px) {
+  height   : 1030px;
+}
+@media screen and (min-width: 739px) {
+  height   : 1060px;
+}
   @media screen and (min-width: $tablet) {
     max-width : max-content;
     max-height: 570px;
