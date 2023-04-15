@@ -223,7 +223,7 @@
     width        : 100%;
     min-height   : 26rem;
     position     : absolute;
-    top          : 70%;
+    top          : 77%;
     left         : 0;
     right        : 0;
     bottom       : 0;
@@ -253,7 +253,7 @@
   & .swiper-initialized {
     // max-height: 608px;
     overflow  : hidden;
-    min-height: 750px;
+    min-height: 760px;
     min-width : 100%;
 
     @media screen and (min-width: $tablet) and (max-width: $desktop-small) {
