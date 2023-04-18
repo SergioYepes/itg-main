@@ -55,12 +55,8 @@ export const ServiceList = () => {
         <Swiper
           modules={[Navigation, Autoplay, Pagination]}
           direction={orientation}
-          // autoplay={{
-          //   delay: 3000,
-          // }}
           speed={800}
           slidesPerView={1}
-          //loop={true}
           className="slider__services"
           pagination={{
             type: "bullets",

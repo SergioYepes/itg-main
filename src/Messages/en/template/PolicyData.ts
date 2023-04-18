@@ -48,4 +48,14 @@ export const PolicyData = {
   "policy-Update-title": "Validity, modifications and updates",
   "policy-Update":
     "This Personal Data Treatment Policy is updated and valid as of 04/21/2020. Any modification or update that implements a substantial change will be communicated to the Holders of the personal data.",
+  "policy-Introduction-mobile": "Introdution",
+  "policy-Definition-mobile": "Definitions",
+  "policy-Values-mobile": "Values",
+  "policy-Treatment-mobile": "Treatment",
+  "policy-Duties-mobile":"Duties",
+  "policy-Rights-mobile": "Rights",
+  "policy-ResponsableArea-mobile":"Responsable Area",
+  "policy-TitularProcedure-mobile":"Titular Procedure",
+  "policy-Update-mobile": "Update",
+  
 };

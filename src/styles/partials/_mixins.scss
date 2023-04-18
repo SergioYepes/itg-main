@@ -1,7 +1,7 @@
 @mixin position($top, $left) {
 	position: absolute;
 	top     : $top;
-	left    : $left
+	left    : $left;
 }
 
 @mixin size($height, $width) {

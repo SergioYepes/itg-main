@@ -7,20 +7,35 @@ import "../../styles/language.scss";
 import { useEffect, useState } from "react";
 
 export const Header = () => {
-  const [showHeader, setShowHeader] = useState(true);
+  const [showHeader, setShowHeader] = useState<boolean>(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1240);
 
+  const headerdeskto = showHeader ? "header" : "header-hidden";
+  
   useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 1240);
+    }
+  
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
       setShowHeader(prevScrollPos > currentScrollPos || currentScrollPos < 10);
       setPrevScrollPos(currentScrollPos);
     };
+  
+    window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
+  
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isMobile, prevScrollPos]);
+
+
   return (
-    <header className={showHeader ? "header" : "header-hidden"}>
+    <header className={isMobile ? "header" : headerdeskto}>
       <div className="header__container">
         <div className="header__logo">
           <Link to="/">

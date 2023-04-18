@@ -22,7 +22,7 @@ export const Countries = () => {
 
   useEffect(() => {
     function handleResize() {
-      setIsMobile(window.innerWidth < 767);
+      setIsMobile(window.innerWidth < 768);
     }
 
     window.addEventListener("resize", handleResize);

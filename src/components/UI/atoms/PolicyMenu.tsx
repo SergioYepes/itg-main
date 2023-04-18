@@ -1,10 +1,21 @@
 import { FormattedMessage } from "react-intl";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import LanguageContext from "../../../context/language";
+
 
 export const PolicyMenu = () => {
   const [activeButton, setActiveButton] = useState<number | null>(null);
-
+  const { language } = useContext(LanguageContext);
   const [activeMobile, setActiveMobile] = useState("");
+  const [finalPosition, setFinalPosition] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 767);
+  const [isTablet, setIsTablet] = useState<boolean>(window.innerWidth < 1240);
+  const [isMobileHeight, setIsMobileHeight] = useState<boolean>(window.innerHeight < 868);
+  const [isTabletHeight, setIsTabletHeight] = useState<boolean>(window.innerHeight < 1200);
+
+
+
+  
   const [display, setDisplay] = useState(false);
   const options = [
     "Introduction",
@@ -17,10 +28,33 @@ export const PolicyMenu = () => {
     "TitularProcedure",
     "Update",
   ];
+  const optionsEnMob = [
+    "Introduction",
+    "Definition",
+    "Values",
+    "Treatment",
+    "Duties",
+    "Rights",
+    "Responsable Area",
+    "Titular Procedure",
+    "Update",
+  ];
+  const optionsEsMob = [
+    "Introduccion",
+    "Definicion",
+    "Valores",
+    "Tratamiento",
+    "Deberes",
+    "Derechos",
+    "Area Responsable",
+    "Procedencia Titular",
+    "Actualizacion",
+  ];
+  
 
   const toggleOptions = (index: number) => {
     setActiveButton(index === activeButton ? null : index);
-    setActiveMobile(options[index]);
+    setActiveMobile(language === "en" ? optionsEnMob[index] : optionsEsMob[index]);
     setDisplay(!display);
   };
 
@@ -29,13 +63,29 @@ export const PolicyMenu = () => {
   };
 
   useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 767);
+      setIsTablet(window.innerHeight < 1240);
+      setIsMobileHeight(window.innerHeight < 868);
+      setIsTabletHeight(window.innerHeight < 1200);
+
+
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isMobile]);
+  useEffect(() => {
     const policyContainer = document.querySelector(
       ".policy-Big"
     ) as HTMLElement;
 
     const handleScroll = () => {
-      const scrollPosition = policyContainer?.scrollTop;
+      const scrollPosition = policyContainer?.scrollTop + 90;
       const optionsElements = document.querySelectorAll(".policyMenuOption");
+      
 
       optionsElements.forEach((option, index) => {
         const section = document.querySelector(
@@ -43,8 +93,32 @@ export const PolicyMenu = () => {
         ) as HTMLElement;
         const top = section?.offsetTop;
         const bottom = top + section?.offsetHeight;
+        const scrollable = policyContainer.scrollHeight - window.innerHeight
+        
+       
+        if(isTablet && isTabletHeight && scrollPosition >= scrollable-400 ) {
+          setActiveButton(options.length-1);
+          setActiveMobile(language === "en" ? optionsEnMob[options.length-1] : optionsEsMob[options.length-1]);
+          setFinalPosition(true)
+          
+        } 
+        else if(isMobile && isMobileHeight && scrollPosition >= scrollable-250 ) {
+          setActiveButton(options.length-1);
+          setActiveMobile(language === "en" ? optionsEnMob[options.length-1] : optionsEsMob[options.length-1]);
+          setFinalPosition(true)
+        } 
+        else if(isMobile && scrollPosition >= scrollable-200 ) {
+          setActiveButton(options.length-1);
+          setActiveMobile(language === "en" ? optionsEnMob[options.length-1] : optionsEsMob[options.length-1]);
+          setFinalPosition(true)
+        } 
 
-        if (
+       else if(scrollPosition >= scrollable-150 ) {
+          setActiveButton(options.length-1);
+          setActiveMobile(language === "en" ? optionsEnMob[options.length-1] : optionsEsMob[options.length-1]);
+          setFinalPosition(true)
+        } 
+        else if (
           scrollPosition &&
           top &&
           bottom &&
@@ -52,9 +126,13 @@ export const PolicyMenu = () => {
           scrollPosition < bottom
         ) {
           setActiveButton(index);
-          setActiveMobile(options[index]);
+          setActiveMobile(language === "en" ? optionsEnMob[index] : optionsEsMob[index]);
+          setFinalPosition(true)
+          // setSemiFinalPosition(false)
         }
+        
       });
+     
     };
 
     if (policyContainer) {
@@ -67,7 +145,6 @@ export const PolicyMenu = () => {
       }
     };
   }, [activeButton]);
-
   return (
     <div className="policyCont">
       <div className="policyMenuContDesktop">
@@ -87,8 +164,8 @@ export const PolicyMenu = () => {
         ))}
       </div>
 
-      <div className="policyMenuContMobile">
-        <div className={`dropdown-button`} onClick={handleClick}>
+      <div className={finalPosition ? "policyMenuMobileFinal" :"policyMenuContMobile" }>
+        <div className="dropdown-button" onClick={handleClick}>
           {activeMobile || "Select"}
         </div>
         {display && (
@@ -102,7 +179,7 @@ export const PolicyMenu = () => {
                 onClick={() => toggleOptions(index)}
               >
                 <a href={`#${option}`}>
-                  <FormattedMessage id={`policy-${option}-title`}>
+                  <FormattedMessage id={`policy-${option}-mobile`}>
                     {(message) => (
                       <h2 className="policyMenu-Title">{`${message}`}</h2>
                     )}

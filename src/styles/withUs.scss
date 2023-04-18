@@ -1,348 +1,414 @@
 @import './partials/general';
 
 .work-bigCont {
-	display       : flex;
-	flex-direction: column;
-	gap           : 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+	background-color: #E7EDF9;
 }
 
 .work-ImgCont {
-	position  : relative;
-	margin-top: 88px;
+  position: relative;
+  margin-top: 70px;
 
-	@media screen and (min-width: $tablet) {
-		margin-top: 140px;
-	}
+  @media screen and (min-width: $tablet) {
+    margin-top: 140px;
+  }
 
-	@media screen and (min-width: $desktop-small) {
-		margin-top: 110px;
-	}
+  @media screen and (min-width: $desktop-small) {
+    margin-top: 110px;
+  }
 }
 
 .work-ShadowImg,
 .work-FullImg {
-	@media screen and (min-width: $tablet) {
-		top   : 0;
-		left  : 0;
-		right : 0;
-		bottom: 0;
-	}
+  @media screen and (min-width: $tablet) {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 
-	position: absolute;
+  position: absolute;
 }
 
 .work-TextImg {
-	@media screen and (min-width: $desktop-small) {
-		width : 654px;
-		height: 232px;
-		left  : 217px !important;
-		top   : 100px !important;
-	}
+  @media screen and (min-width: $desktop-small) {
+    width: 654px;
+    height: 232px;
+    left: 217px !important;
+    top: 100px !important;
+  }
 
-	@media screen and (min-width: $tablet) {
-		width : 650px;
-		height: 232px;
-		left  : 60px;
-		top   : 20px;
-	}
+  @media screen and (min-width: $tablet) {
+    width: 650px;
+    height: 232px;
+    left: 60px;
+    top: 20px;
+  }
 
-	top     : 30px;
-	left    : 0px;
-	width   : 355px;
-	height  : 155px;
-	position: absolute;
+  top: 30px;
+  left: 0px;
+  width: 355px;
+  height: 155px;
+  position: absolute;
 }
 
 .work-ShadowImg,
 .work-TextImg {
-	z-index: 10;
+  z-index: 10;
 }
 
 .work-FormCont {
-	@media screen and (min-width: $desktop-small) {
-		margin-top: 380px !important;
-	}
+  @media screen and (min-width: 1376px) and (max-width: calc($wide-screen - 1px)) {
+    margin-top: 420px !important;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-top: 30%;
+  }
+  @media screen and (min-width: 501px) and (max-width: calc($tablet - 1px)) {
+    margin-top: 55%;
+  }
+  @media screen and (min-width: 440px) and (max-width: 500px) {
+    margin-top: 235px;
+  }
+  margin-top: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
-	@media screen and (min-width: $tablet) {
-		margin-top: 230px;
-	}
+  & .contact-input {
+    border-radius: 8px;
+    min-height: 56px;
+    font-size: 17px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #a4afba;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    width: 345px;
+    color: #8f99a4;
 
-	@media screen and (min-width: 440px) and (max-width: calc($tablet - 1px)) {
-		margin-top: 385px;
-	}
+    &::placeholder {
+      color: #a4afba;
+      font-size: 16px;
+      margin: 0 40px;
+    }
 
-	@media screen and (min-width: 1376px) and (max-width: calc($wide-screen - 1px)) {
-		margin-top: 420px !important;
-	}
+    @media screen and (min-width: $tablet) {
+      width: 350px;
+    }
 
-	@media screen and (min-width: $wide-screen) {
-		margin-top: 30% !important;
-	}
+    @media screen and (min-width: $desktop-small) {
+      width: 408px;
+    }
+  }
 
-	margin-top     : 180px;
-	display        : flex;
-	justify-content: center;
-	flex-direction : column;
+  & .container__input--file {
+    width: 350px;
+    margin: auto;
+    height: 56px;
+    left: 1px;
+    top: 480px;
+    background: #ffffff;
+    border: 1px solid #a4afba;
+    border-radius: 8px;
+    display: flex;
 
-	& .contact-input {
-		border-radius: 8px;
-		min-height   : 56px;
-		font-size    : 17px;
-		padding-left : 20px;
-		box-sizing   : border-box;
-		background   : #FFFFFF;
-		border       : 1px solid #A4AFBA;
-		font-family  : 'Lato';
-		font-style   : normal;
-		font-weight  : 400;
-		line-height  : 18px;
-		width        : 345px;
-		color        : #8F99A4;
+    @media screen and (min-width: $desktop-small) {
+      width: 355px;
+    }
 
-		&::placeholder {
-			color    : #A4AFBA;
-			font-size: 16px;
-			margin   : 0 40px;
-		}
+    @media screen and (min-width: $desktop-small) {
+      width: 408px;
+    }
 
-		@media screen and (min-width: $tablet) {
-			width: 350px;
-		}
+    .input__file--chargedPlaceholder {
+      display: flex;
+      width: 90%;
+      justify-content: flex-start;
+      gap: 20px;
+      margin-left: 10px;
 
+      p {
+        overflow: hidden;
+        max-width: 145px;
+
+        @media screen and (min-width: $tablet) {
+          max-width: 250px;
+        }
+      }
+    }
+  }
+
+  & .custom-file-upload {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 4px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #e2e3e5;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+
+    @media screen and (max-width: $desktop-small) {
+      padding: 12px 12px;
+    }
+  }
+
+  & .custom-file-upload:hover {
+    background-color: #e6e6e6;
+  }
+
+  & input[type='file'] {
+    display: none;
+  }
+
+  & .input--file--text {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #a4afba;
+    width: 294px;
+    margin: auto auto auto 20px;
+  }
+
+  & .dial-code {
+    position: absolute;
+    left: 26.5%;
+    z-index: 10;
+    top: 3.5%;
+
+    @media screen and (min-width: $tablet) {
+      left: 21.5%;
+      top: 2px;
+    }
 		@media screen and (min-width: $desktop-small) {
-			width: 408px;
-		}
-	}
+      left: 19%;
+      top: 2px;
+    }
+  }
 
-	& .container__input--file {
-		width        : 350px;
-		margin       : auto;
-		height       : 56px;
-		left         : 1px;
-		top          : 480px;
-		background   : #FFFFFF;
-		border       : 1px solid #A4AFBA;
-		border-radius: 8px;
-		display      : flex;
+  & .contact__form--container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: 10px;
 
-		@media screen and (min-width: $desktop-small) {
-			width: 355px;
-		}
+    @media screen and (min-width: $tablet) {
+      gap: 30px;
+    }
 
-		@media screen and (min-width: $desktop-small) {
-			width: 408px;
-		}
+    & .PhoneInputInput {
+      width: 27.75rem;
 
-		.input__file--chargedPlaceholder {
-			display        : flex;
-			width          : 90%;
-			justify-content: flex-start;
-			gap            : 20px;
-			margin-left    : 10px;
+      @media screen and (min-width: $desktop-small) {
+        width: 33.75rem;
+      }
+    }
+  }
 
-			p {
-				overflow : hidden;
-				max-width: 145px;
+  & .PhoneInput {
+    display: flex;
+    align-items: baseline;
+  }
 
-				@media screen and (min-width: $tablet) {
-					max-width: 250px;
-				}
-			}
-		}
-	}
+  & .workWithUS__textarea {
+    width: 350px;
+    height: 187px;
+    background: #ffffff;
+    border: 1px solid #a4afba;
+    border-radius: 8px;
+    margin: 0 auto;
+    padding: 15px;
+    color: #a4afba;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
 
-	& .custom-file-upload {
-		display         : inline-block;
-		padding         : 8px 12px;
-		margin          : 4px;
-		cursor          : pointer;
-		border          : 1px solid #ccc;
-		border-radius   : 4px;
-		background-color: #E2E3E5;
-		color           : #333;
-		font-size       : 16px;
-		font-weight     : bold;
-		text-align      : center;
+    &::placeholder {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+      color: #a4afba;
+    }
 
+    @media screen and (min-width: $tablet) {
+      width: 730px;
+      min-height: 200px;
+    }
 
-		@media screen and (max-width: $desktop-small) {
-			padding: 12px 12px;
-		}
-	}
+    @media screen and (min-width: $desktop-small) {
+      width: 835px;
+      min-height: 200px;
+    }
+  }
 
-	& .custom-file-upload:hover {
-		background-color: #e6e6e6;
-	}
+  & .contact-send {
+    padding: 15px 10px 10px 8px;
+    width: 345px;
+    background: #ad1ac7;
+    border: transparent;
+    border-radius: 8px;
+    color: #ffffff;
+    margin: 10px auto;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    cursor: pointer;
 
-	& input[type="file"] {
-		display: none;
-	}
+    @media screen and (min-width: $tablet) {
+      width: 408px;
+    }
+  }
 
-	& .input--file--text {
-		font-family: 'Lato';
-		font-style : normal;
-		font-weight: 400;
-		font-size  : 16px;
-		line-height: 18px;
-		color      : #A4AFBA;
-		width      : 294px;
-		margin     : auto auto auto 20px;
-	}
-
-	& .dial-code {
-		position: absolute;
-		left    : 26.5%;
-		z-index : 10;
-		top     : 3.5%;
-
-		@media screen and (min-width: $tablet) {
-			left: 19%;
-			top : 2px;
-		}
-	}
-
-	& .contact__form--container {
-		display       : flex;
-		flex-direction: row;
-		position      : relative;
-		gap           : 10px;
-
-		@media screen and (min-width: $tablet) {
-			gap: 30px;
-		}
-
-		& .PhoneInputInput {
-			width: 27.75rem;
-
-			@media screen and (min-width: $desktop-small) {
-				width: 33.75rem;
-			}
-		}
-	}
-
-	& .PhoneInput {
-		display    : flex;
-		align-items: baseline;
-	}
-
-	& .workWithUS__textarea {
-		width        : 350px;
-		height       : 187px;
-		background   : #FFFFFF;
-		border       : 1px solid #A4AFBA;
-		border-radius: 8px;
-		margin       : 0 auto;
-		padding      : 15px;
-		color        : #A4AFBA;
-		font-family  : "Lato";
-		font-style   : normal;
-		font-weight  : 400;
-		font-size    : 16px;
-
-		&::placeholder {
-			font-family: 'Lato';
-			font-style : normal;
-			font-weight: 400;
-			font-size  : 16px;
-			line-height: 18px;
-			color      : #A4AFBA;
-		}
-
-		@media screen and (min-width: $tablet) {
-			width     : 730px;
-			min-height: 200px;
-		}
-
-		@media screen and (min-width: $desktop-small) {
-			width     : 835px;
-			min-height: 200px;
-		}
-
-	}
-
-	& .contact-send {
-		padding      : 15px 10px 10px 8px;
-		width        : 345px;
-		background   : #AD1AC7;
-		border       : transparent;
-		border-radius: 8px;
-		color        : #FFFFFF;
-		margin       : 10px auto;
-		font-size    : 14px;
-		font-family  : 'Montserrat';
-		cursor       : pointer;
-
-		@media screen and (min-width: $tablet) {
-			width: 408px;
-
-		}
-	}
-
-	.contact-send:disabled {
-		cursor        : not-allowed;
-		pointer-events: all !important;
-	}
+  .contact-send:disabled {
+    cursor: not-allowed;
+    pointer-events: all !important;
+  }
 }
 
 .work-FirstRowCont {
-	display       : flex;
-	flex-direction: column;
-	margin-bottom : 30px;
-	gap           : 20px;
-	align-items   : center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  gap: 20px;
+  align-items: center;
 
-	@media screen and (min-width: $tablet) {
-		gap            : 20px;
-		margin         : 0 20px;
-		margin-bottom  : 30px;
-		justify-content: center;
-		flex-direction : row;
-	}
+  @media screen and (min-width: $tablet) {
+    gap: 20px;
+    margin: 0 20px;
+    margin-bottom: 30px;
+    justify-content: center;
+    flex-direction: row;
+  }
 }
 
 .work-SecondRowCont {
-	display       : flex;
-	flex-direction: column;
-	margin-bottom : 30px;
-	gap           : 20px;
-	align-items   : center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  gap: 20px;
+  align-items: center;
 
-	@media screen and (min-width: $tablet) {
-		margin         : 0 20px;
-		margin-bottom  : 30px;
-		justify-content: center;
-		flex-direction : row;
-	}
+  @media screen and (min-width: $tablet) {
+    margin: 0 20px;
+    margin-bottom: 30px;
+    justify-content: center;
+    flex-direction: row;
+  }
 
-	@media screen and (min-width: $desktop-small) {
-		margin-bottom  : 30px;
-		justify-content: center;
-		flex-direction : row;
-	}
+  @media screen and (min-width: $desktop-small) {
+    margin-bottom: 30px;
+    justify-content: center;
+    flex-direction: row;
+  }
 }
 
 .work-TextArea {
-	display        : flex;
-	justify-content: center;
-	margin-bottom  : 30px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
-.work-CheckBox {
-	display        : flex;
-	justify-content: center;
-	margin-bottom  : 30px;
-
-	.data-of-policy {
-		max-width  : 370px;
-		margin-left: 22px;
-
-		@media screen and (min-width: $tablet) {
-			white-space: nowrap;
-		}
-
-	}
-}
 
 .captcha {
-	margin: 0 auto;
+  margin: 0 auto;
+}
+.container-check-box {
+  display       : flex;
+  gap           : 20px;
+  flex-direction: column;
+	margin: 0 auto 30px auto;
+  width         : 300px;
+
+  @media screen and (min-width: $desktop-small) {
+    display       : flex;
+    gap           : 20px;
+    flex-direction: column;
+  }
+
+  .data-of-policy {
+    white-space: nowrap;
+  }
+
+  .checkbox-label {
+    display      : inline-block;
+    position     : relative;
+    padding-left : 32px;
+    margin-bottom: 10px;
+    line-height  : 1.5;
+    cursor       : pointer;
+  }
+
+  .checkbox-text {
+    font-family: 'Lato', sans-serif;
+    color      : #727d88;
+    font-size  : 16px;
+    font-weight: 400;
+
+    a {
+      text-decoration: none;
+      border-bottom  : 1px solid #00b2ea;
+
+      span {
+        color      : #00b2ea !important;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .checkbox-custom {
+    position        : absolute;
+    left            : 0;
+    top             : 2px;
+    height          : 18px;
+    width           : 18px;
+    background-color: #fff;
+    border          : 2px solid #ccc;
+    border-radius   : 3px;
+    opacity         : 1;
+  }
+
+  .checkbox-label:hover .checkbox-custom {
+    border-color: #00b2ea;
+  }
+
+  .checkbox-label input[type='checkbox']:checked+.checkbox-custom {
+    border-color: #00b2ea;
+  }
+
+  .checkbox-custom:before {
+    content : url('../assets/img/tick.svg');
+    position: absolute;
+    display : none;
+    left    : -1px;
+    top     : -3px;
+  }
+
+  .checkbox-label input[type='checkbox']:checked+.checkbox-custom:before {
+    display: block;
+  }
+
+  .checkbox-label input[type='checkbox'] {
+    opacity : 0;
+    position: absolute;
+    top     : 0;
+    left    : 0;
+    width   : 18px;
+    height  : 18px;
+    margin  : 0;
+    z-index : -1;
+    cursor  : pointer;
+  }
 }

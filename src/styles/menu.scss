@@ -65,6 +65,9 @@
     @media screen and (min-width: $desktop-large) {
       padding-top: 0;
     }
+    @media screen and (min-width: $tablet) {
+      top: -30px;
+    }
 
     &--active {
       height : 100vh;
@@ -162,7 +165,7 @@
 }
 
 .dropdown {
-  @media screen and (min-width: $desktop-small) {
+  @media screen and (min-width: $desktop-large) {
     display: none;
   }
 }

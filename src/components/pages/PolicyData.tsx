@@ -8,7 +8,9 @@ import ReactMarkdown from "react-markdown";
 export const PolicyData = () => {
   return (
     <div className="policy-Big">
-      <Translate />
+      <div className="translateCont">
+        <Translate />
+      </div>
       <div className="policyContent">
         <PolicyMenu />
         <div className="policyContainer" id="policyContainerID">
@@ -25,15 +27,14 @@ export const PolicyData = () => {
                 </ReactMarkdown>
               )}
             </FormattedMessage>
+            <FormattedMessage id="policy-Introduction">
+              {(message) => (
+                <ReactMarkdown className="policySelectBody">
+                  {`${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
           </div>
-
-          <FormattedMessage id="policy-Introduction">
-            {(message) => (
-              <ReactMarkdown className="policySelectBody">
-                {`${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
           <div id="Definition">
             <FormattedMessage id="policy-Definition-title">
               {(message) => (
@@ -42,15 +43,14 @@ export const PolicyData = () => {
                 </ReactMarkdown>
               )}
             </FormattedMessage>
+            <FormattedMessage id="policy-Definition">
+              {(message) => (
+                <ReactMarkdown className="policySelectBody">
+                  {`${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
           </div>
-
-          <FormattedMessage id="policy-Definition">
-            {(message) => (
-              <ReactMarkdown className="policySelectBody">
-                {`${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
           <div id="Values">
             <FormattedMessage id="policy-Values-title">
               {(message) => (
@@ -59,15 +59,15 @@ export const PolicyData = () => {
                 </ReactMarkdown>
               )}
             </FormattedMessage>
-          </div>
 
-          <FormattedMessage id="policy-Values">
-            {(message) => (
-              <ReactMarkdown className="policySelectBody">
-                {`${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
+            <FormattedMessage id="policy-Values">
+              {(message) => (
+                <ReactMarkdown className="policySelectBody">
+                  {`${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
+          </div>
           <div id="Treatment">
             <FormattedMessage id="policy-Treatment-title">
               {(message) => (
@@ -76,39 +76,39 @@ export const PolicyData = () => {
                 </ReactMarkdown>
               )}
             </FormattedMessage>
+
+            <FormattedMessage id="policy-Treatment-firstSubtitle">
+              {(message) => (
+                <ReactMarkdown className="policySelectSubTitle">
+                  {`**4.1** ${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
+
+            <FormattedMessage id="policy-Treatment-firstDescription">
+              {(message) => (
+                <ReactMarkdown className="policySelectBody">
+                  {`${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
+
+            <FormattedMessage id="policy-Treatment-secondSubtitle">
+              {(message) => (
+                <ReactMarkdown className="policySelectSubTitle">
+                  {`**4.2** ${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
+
+            <FormattedMessage id="policy-Treatment-secondDescription">
+              {(message) => (
+                <ReactMarkdown className="policySelectBody">
+                  {`${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
           </div>
-
-          <FormattedMessage id="policy-Treatment-firstSubtitle">
-            {(message) => (
-              <ReactMarkdown className="policySelectSubTitle">
-                {`**4.1** ${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
-
-          <FormattedMessage id="policy-Treatment-firstDescription">
-            {(message) => (
-              <ReactMarkdown className="policySelectBody">
-                {`${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
-
-          <FormattedMessage id="policy-Treatment-secondSubtitle">
-            {(message) => (
-              <ReactMarkdown className="policySelectSubTitle">
-                {`**4.2** ${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
-
-          <FormattedMessage id="policy-Treatment-secondDescription">
-            {(message) => (
-              <ReactMarkdown className="policySelectBody">
-                {`${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
           <div id="Duties">
             <FormattedMessage id="policy-Duties-title">
               {(message) => (
@@ -117,39 +117,39 @@ export const PolicyData = () => {
                 </ReactMarkdown>
               )}
             </FormattedMessage>
+
+            <FormattedMessage id="policy-Duties-firstSubtitle">
+              {(message) => (
+                <ReactMarkdown className="policySelectSubTitle">
+                  {`**5.1** ${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
+
+            <FormattedMessage id="policy-Duties-firstDescription">
+              {(message) => (
+                <ReactMarkdown className="policySelectBody">
+                  {`${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
+
+            <FormattedMessage id="policy-Duties-secondSubtitle">
+              {(message) => (
+                <ReactMarkdown className="policySelectSubTitle">
+                  {`**5.2** ${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
+
+            <FormattedMessage id="policy-Duties-secondDescription">
+              {(message) => (
+                <ReactMarkdown className="policySelectBody">
+                  {`${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
           </div>
-
-          <FormattedMessage id="policy-Duties-firstSubtitle">
-            {(message) => (
-              <ReactMarkdown className="policySelectSubTitle">
-                {`**5.1** ${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
-
-          <FormattedMessage id="policy-Duties-firstDescription">
-            {(message) => (
-              <ReactMarkdown className="policySelectBody">
-                {`${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
-
-          <FormattedMessage id="policy-Duties-secondSubtitle">
-            {(message) => (
-              <ReactMarkdown className="policySelectSubTitle">
-                {`**5.2** ${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
-
-          <FormattedMessage id="policy-Duties-secondDescription">
-            {(message) => (
-              <ReactMarkdown className="policySelectBody">
-                {`${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
 
           <div id="Rights">
             <FormattedMessage id="policy-Rights-title">
@@ -159,39 +159,39 @@ export const PolicyData = () => {
                 </ReactMarkdown>
               )}
             </FormattedMessage>
+
+            <FormattedMessage id="policy-Rights-firstSubtitle">
+              {(message) => (
+                <ReactMarkdown className="policySelectSubTitle">
+                  {`**6.1** ${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
+
+            <FormattedMessage id="policy-Rights-firstDescription">
+              {(message) => (
+                <ReactMarkdown className="policySelectBody">
+                  {`${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
+
+            <FormattedMessage id="policy-Rights-secondSubtitle">
+              {(message) => (
+                <ReactMarkdown className="policySelectSubTitle">
+                  {`**6.2** ${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
+
+            <FormattedMessage id="policy-Rights-secondDescription">
+              {(message) => (
+                <ReactMarkdown className="policySelectBody">
+                  {`${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
           </div>
-
-          <FormattedMessage id="policy-Rights-firstSubtitle">
-            {(message) => (
-              <ReactMarkdown className="policySelectSubTitle">
-                {`**6.1** ${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
-
-          <FormattedMessage id="policy-Rights-firstDescription">
-            {(message) => (
-              <ReactMarkdown className="policySelectBody">
-                {`${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
-
-          <FormattedMessage id="policy-Rights-secondSubtitle">
-            {(message) => (
-              <ReactMarkdown className="policySelectSubTitle">
-                {`**6.2** ${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
-
-          <FormattedMessage id="policy-Rights-secondDescription">
-            {(message) => (
-              <ReactMarkdown className="policySelectBody">
-                {`${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
           <div id="ResponsableArea">
             <FormattedMessage id="policy-ResponsableArea-title">
               {(message) => (
@@ -200,15 +200,15 @@ export const PolicyData = () => {
                 </ReactMarkdown>
               )}
             </FormattedMessage>
-          </div>
 
-          <FormattedMessage id="policy-ResponsableArea">
-            {(message) => (
-              <ReactMarkdown className="policySelectBody">
-                {`${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
+            <FormattedMessage id="policy-ResponsableArea">
+              {(message) => (
+                <ReactMarkdown className="policySelectBody">
+                  {`${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
+          </div>
           <div id="TitularProcedure">
             <FormattedMessage id="policy-TitularProcedure-title">
               {(message) => (
@@ -217,15 +217,15 @@ export const PolicyData = () => {
                 </ReactMarkdown>
               )}
             </FormattedMessage>
-          </div>
 
-          <FormattedMessage id="policy-TitularProcedure">
-            {(message) => (
-              <ReactMarkdown className="policySelectBody">
-                {`${message}`}
-              </ReactMarkdown>
-            )}
-          </FormattedMessage>
+            <FormattedMessage id="policy-TitularProcedure">
+              {(message) => (
+                <ReactMarkdown className="policySelectBody">
+                  {`${message}`}
+                </ReactMarkdown>
+              )}
+            </FormattedMessage>
+          </div>
           <div id="Update">
             <FormattedMessage id="policy-Update-title">
               {(message) => (

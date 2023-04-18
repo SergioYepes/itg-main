@@ -4,6 +4,8 @@
 .policy-Big {
 	height  : 140vh;
 	overflow: scroll;
+	margin-top: 30px;
+	
 
 	&::-webkit-scrollbar {
 		opacity: 0;
@@ -11,7 +13,7 @@
 }
 
 .policyTitle {
-	margin-top    : 120px;
+	margin-top    : 40px;
 	font-family   : 'Montserrat';
 	font-style    : normal;
 	font-weight   : 700;
@@ -21,7 +23,7 @@
 	color         : #1D2734;
 
 	@media screen and (min-width: $desktop-large) {
-		margin-top: 150px;
+		margin-top: 90px;
 	}
 }
 
@@ -63,39 +65,34 @@
 	align-items   : flex-start;
 	flex-direction: column;
 	margin        : 30px;
-
-	@media screen and (max-height: 820px) and (max-width: calc($tablet - 1px)) {
-		min-height: 13850px;
-
+	@media screen and (min-width: calc($tablet - 1px) ) and (min-height: 900px){
+		min-height : 7400px !important;
 	}
-
-	@media screen and (min-height: 822px) and (max-width: calc($tablet - 1px)) {
-		min-height: 13850px;
-
+	@media screen and (min-width: calc($tablet + 100px) ) and (min-height: 900px){
+		min-height : 6900px !important;
 	}
-
-	@media screen and (min-height: 845px) and (max-width: calc($tablet - 1px)) {
-		min-height: 13850px;
-
+	@media screen and (min-width:$desktop-small) and (min-height: 900px){
+		min-height : 6400px !important;
 	}
-
-	@media screen and (min-width: $tablet) {
-		min-height: 7700px;
+	@media screen and (min-width:$desktop-small) {
+		min-height : 5700px;
 	}
-
-	@media screen and (min-width: 830px) {
-		min-height: 7250px;
-	}
-
 	@media screen and (min-width:$desktop-large) {
 		margin-left: 610px;
-		min-height : 8500px;
+		min-height : 7200px;
 	}
 
 	@media screen and (min-width:$wide-screen) {
 		margin-left: 610px;
-		min-height : 8000px;
-
+		min-height : 6800px;
+	}
+	@media screen and (min-width: 1850px) {
+		margin-left: 610px;
+		min-height : 5800px;
+	}
+	@media screen and (min-width: 2000px) {
+		margin-left: 610px;
+		min-height : 5000px;
 	}
 }
 
@@ -109,27 +106,49 @@
 	@media screen and (min-width:$desktop-large) {
 		display       : flex;
 		padding-left  : 30px;
-		position      : fixed;
+		position      : absolute;
 		flex-direction: column;
 		margin-top    : 100px;
 		max-width     : 460px;
 		gap           : 10px;
-		z-index       : -10
 	}
 }
 
 .policyMenuContMobile {
-	position      : absolute;
-	bottom        : 45px;
+	position      : fixed;
+	bottom        : 40px;
 	left          : 0;
-	right         : 0;
+	right         : -350px;
 	display       : flex;
 	flex-direction: column-reverse;
 	align-items   : center;
+	@media screen and (min-width:320px) {
+		right         : -180px;
+	}
+	@media screen and (min-width:450px) {
+		right         : -220px;
+	}
+	@media screen and (min-width:550px) {
+		right         : -260px;
+	}
+	@media screen and (min-width:650px) {
+		right         : -310px;
+	}
+	@media screen and (min-width:$tablet) {
+		right         : -350px;
+	}
+	@media screen and (min-width:$desktop-small) {
+		right         : -550px;
+		bottom				: 40px
+	}
 
 	@media screen and (min-width:$desktop-large) {
 		display: none !important;
 	}
+}
+.policyMenuMobileFinal{
+	@extend .policyMenuContMobile;
+	bottom: 40px
 }
 
 .policyMenuOption {
@@ -164,7 +183,24 @@
 	flex-direction : row;
 	justify-content: center;
 	align-items    : center;
+	@media screen and (min-width :320px) {
+		width          : 150px;
+	}
+	@media screen and (min-width:450px) {
+		width         : 200px;
+	}
+	@media screen and (min-width:550px) {
+		width         : 250px;
+	}
+	@media screen and (min-width:650px) {
+		width         : 300px;
+	}
+	@media screen and (min-width:$tablet) {
+		width         : 350px;
+	}
+	
 }
+
 
 .policyList {
 	width         : 350px;
@@ -177,6 +213,21 @@
 	overflow      : scroll;
 	flex-direction: column;
 	gap           : 15px;
+	@media screen and (min-width : 320px) {
+		width          : 150px;
+	}
+	@media screen and (min-width : 450px) {
+		width         : 200px;
+	}
+	@media screen and (min-width : 550px) {
+		width         : 250px;
+	}
+	@media screen and (min-width:650px) {
+		width         : 300px;
+	}
+	@media screen and (min-width:$tablet) {
+		width         : 350px;
+	}
 
 	&::-webkit-scrollbar {
 		opacity: 0;
@@ -196,14 +247,30 @@
 	color          : #1D2734;
 	padding        : 0 20px;
 	height         : auto;
-
+	@media screen and (min-width :320px) {
+		padding: 0;
+		font-size: 10px;
+		letter-spacing: -0.85px;
+	}
+	@media screen and (min-width:450px) {
+		font-size: 11px;
+	}
+	@media screen and (min-width:550px) {
+		font-size: 12px;
+		letter-spacing: 0;
+	}
+	@media screen and (min-width:650px) {
+		padding: 0 10px;
+		font-size: 13px;
+		letter-spacing: 0.15px;
+	}
 	& a {
 		text-decoration: none;
 	}
 }
 
-.policyListOptions.active {
-	background: rgba(72, 0, 149, 0.15);
-	color     : #480095;
-	border    : none
+.translateCont{
+	& .selection_languaje{
+		top: 60px
+	}
 }
