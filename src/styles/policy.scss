@@ -84,7 +84,7 @@
 
 	@media screen and (min-width:$wide-screen) and (min-height: 900px) {
 		margin-left: 610px;
-		min-height : 5000px;
+		min-height : 5000px !important; 
 	}
 	// @media screen and (min-width: 1850px) {
 	// 	margin-left: 610px;
