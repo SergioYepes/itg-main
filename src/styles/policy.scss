@@ -77,23 +77,23 @@
 	@media screen and (min-width:$desktop-small) {
 		min-height : 5700px;
 	}
-	@media screen and (min-width:$desktop-large) {
-		margin-left: 610px;
-		min-height : 7200px;
-	}
+	// @media screen and (min-width:$desktop-large) {
+	// 	margin-left: 610px;
+	// 	min-height : 7200px;
+	// }
 
-	@media screen and (min-width:$wide-screen) {
-		margin-left: 610px;
-		min-height : 6800px;
-	}
-	@media screen and (min-width: 1850px) {
-		margin-left: 610px;
-		min-height : 5800px;
-	}
-	@media screen and (min-width: 2000px) {
-		margin-left: 610px;
-		min-height : 5000px;
-	}
+	// @media screen and (min-width:$wide-screen) {
+	// 	margin-left: 610px;
+	// 	min-height : 6800px;
+	// }
+	// @media screen and (min-width: 1850px) {
+	// 	margin-left: 610px;
+	// 	min-height : 5800px;
+	// }
+	// @media screen and (min-width: 2000px) {
+	// 	margin-left: 610px;
+	// 	min-height : 5000px;
+	// }
 }
 
 .policyContent {
