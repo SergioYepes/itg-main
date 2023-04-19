@@ -2,9 +2,9 @@ import { FormattedMessage } from "react-intl";
 import "../../../styles/form.scss";
 import FormValueProps from "../../interfaces/formValues";
 
-function FormTextarea({ formValue, handleChange, className }: FormValueProps) {
+function FormTextarea({ formValue, handleChange, className, id }: FormValueProps) {
   return (
-    <FormattedMessage id="contact-project">
+    <FormattedMessage id={id}>
       {(message) => (
         <textarea
           className={className}

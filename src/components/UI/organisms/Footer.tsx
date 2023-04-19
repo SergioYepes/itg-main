@@ -31,7 +31,6 @@ export const Footer = () => {
             <FormattedMessage id="footer-email">
               {(message) => <h5>{message}</h5>}
             </FormattedMessage>
-            <h5>Bogotá, Colombia</h5>
           </div>
         </div>
         <div className="container__footer__social">
@@ -45,7 +44,7 @@ export const Footer = () => {
               rel="noreferrer"
             >
               <img
-                className="logosFooter"
+                className="logosFooter logo__linkedin"
                 src={logoLinkedin}
                 alt="logoLinkedin"
               />

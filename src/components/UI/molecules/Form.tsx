@@ -198,11 +198,13 @@ function Form() {
         fileName={typeof file === "string" ? "" : file.name}
         fileSizeInKB={fileSizeInKB}
         ref={fileInputRef}
+        id="contact-file"
       />
       <FormTextarea
         formValue={form.tellUs}
         handleChange={handleChange}
         className={"contact--textarea"}
+        id={"contact-project"} 
       />
       <section className="container-check-box">
         <FormCheckBox

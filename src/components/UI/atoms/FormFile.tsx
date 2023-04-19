@@ -5,7 +5,7 @@ import { inputFile } from "../../interfaces/formValues";
 import imgInputFile from "../../../assets/img/adjuntar-archivo.png";
 
 const FormFile = forwardRef<HTMLInputElement, inputFile>(
-  ({ onChange, fileSizeInKB, fileName, file }, ref) => {
+  ({ onChange, fileSizeInKB, fileName, file, id }, ref) => {
     return (
       <div>
         <section className="container__input--file">
@@ -23,7 +23,7 @@ const FormFile = forwardRef<HTMLInputElement, inputFile>(
               <p>{`${fileSizeInKB} KB`}</p>
             </div>
           ) : (
-            <FormattedMessage id="contact-file">
+            <FormattedMessage id={id}>
               {(message) => <p className="input--file--text">{message}</p>}
             </FormattedMessage>
           )}

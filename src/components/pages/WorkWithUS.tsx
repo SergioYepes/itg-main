@@ -143,6 +143,7 @@ function WorkWithUS() {
             fileName={typeof file === 'string' ? '' : file.name}
             fileSizeInKB={fileSizeInKB}
             ref={fileInputRef}
+            id={"workWithUs-file"}
           />
         </div>
         <div className='work-TextArea'>
@@ -150,6 +151,7 @@ function WorkWithUS() {
             formValue={form.tellUs}
             handleChange={handleChange}
             className={'workWithUS__textarea'}
+            id={"workWithUs-project"} 
           />
         </div>
         <div className='container-check-box'>

@@ -1,13 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import {
   isValidPhoneNumber,
   getCountryCallingCode,
 } from 'react-phone-number-input';
-
+import LanguageContext from "../../../context/language";
 function PhoneInputWithSelect({ value, setValue }: any) {
   type ValidationInput = 'notValid' | 'PhoneInput' | 'isValid';
+  const { language } = useContext(LanguageContext);
 
   const [country, setCountry] = useState<any>('CO');
   const [code, setCode] = useState<any>();
@@ -38,7 +39,7 @@ function PhoneInputWithSelect({ value, setValue }: any) {
       <p className='dial-code'>{code}</p>
       <PhoneInput
         className={isValid}
-        placeholder='Enter phone number'
+        placeholder={language==='en' ? "Enter Phone Number" : "Ingresa el Teléfono"}
         value={value}
         onChange={handlePhoneChange}
         defaultCountry='CO'

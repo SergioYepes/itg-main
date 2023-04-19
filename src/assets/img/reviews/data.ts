@@ -20,7 +20,7 @@ const reviewClient = [
     id: "reviews-format-three",
     name: "James Van Arsdale III",
     logo: vtexLogo,
-    position: "Product Manager @ VTEX"
+    position: "Product Manager VTEX"
   }
 ]
 

@@ -2,64 +2,66 @@
 @import './partials/mixins';
 
 .container_country {
-  display: flex;
+  display       : flex;
   flex-direction: column;
-  gap: 50px;
-  overflow: hidden;
-  min-height: 885px;
+  gap           : 50px;
+  overflow      : hidden;
+  min-height    : 885px;
 
   @media screen and (min-width: $desktop-small) {
-    display: flex;
-    padding: 50px 20px;
-    flex-direction: row;
+    display        : flex;
+    padding        : 50px 20px;
+    flex-direction : row;
     justify-content: space-between;
   }
-	@media screen and (min-width: $desktop-small) and (max-width : 1220px) {
+
+  @media screen and (min-width: $desktop-small) and (max-width : 1220px) {
     padding: 100px 20px;
   }
 }
 
 .title__country {
-  font-size: 4rem;
+  font-size  : 4rem;
   line-height: 4.8rem;
   font-weight: 700;
 }
 
 .paragraph__country {
-  font-size: 2rem;
+  font-size  : 2rem;
   line-height: 3.2rem;
 }
 
 .bigImage__countryContainer {
-  display: flex;
+  display : flex;
   position: relative;
-  width: 621px;
+  width   : 621px;
 }
 
 .container__countries--text {
-  width: 90%;
+  width : 90%;
   margin: 0 auto;
 
   @media screen and (min-width: $desktop-small) {
-    width: 35%;
-    margin: 0;
+    width      : 35%;
+    margin     : 0;
     margin-left: 3em;
   }
-	@media screen and (min-width: $desktop-small) and (max-width : 1220px) {
-		width: 42%;
-		margin: -120px 1em 0 2em;
+
+  @media screen and (min-width: $desktop-small) and (max-width : 1220px) {
+    width : 42%;
+    margin: -120px 1em 0 2em;
   }
 }
 
 .container__image--country {
-  margin: 0 auto;
+  margin  : 0 auto;
   position: absolute;
-  left: -4em;
+  left    : -4em;
 
   @media screen and (min-width: $desktop-small) {
     margin: 0 !important;
-    top: 4.5em;
-    left: -14em;
+    top   : 4.5em;
+    left  : -14em;
   }
 
   @media screen and (min-width: $tablet) {
@@ -68,10 +70,10 @@
 }
 
 .container__image--countryEurope {
-  margin: 0 auto;
+  margin  : 0 auto;
   position: absolute;
-  top: -8em;
-  left: 38%;
+  top     : -8em;
+  left    : 38%;
 
   @media screen and (min-width: 530px) and (max-width: 647px) {
     left: 58%;
@@ -83,43 +85,45 @@
 
   @media screen and (min-width: $tablet) {
     left: 33em;
-    top: -16.5em;
+    top : -16.5em;
   }
 
   @media screen and (min-width: $desktop-small) {
     left: 15em;
-    top: -7em;
+    top : -7em;
   }
 }
 
 .image__countries {
-  width: 375px;
+  width      : 375px;
   margin-left: -50px;
-  opacity: 0.4;
+  opacity    : 0.4;
 
   @media screen and (min-width: $tablet) {
-    max-width: 560px;
-    width: 900px;
+    max-width  : 560px;
+    width      : 900px;
     margin-left: 20px;
   }
 }
 
 .image__countriesEurope {
-  width: 320px;
-  opacity: 0.4;
+  width      : 320px;
+  opacity    : 0.4;
   margin-left: -35px;
-  margin-top: -20px;
+  margin-top : -20px;
 
   @media screen and (min-width: 811px) {
-    width: 500px;
+    width : 500px;
     margin: 0;
   }
-	@media screen and (min-width: $tablet) and (max-width : 810px) {
-    width: 417px;
+
+  @media screen and (min-width: $tablet) and (max-width : 810px) {
+    width : 417px;
     margin: 0;
   }
+
   @media screen and (min-width: $desktop-small) {
-    width: 400px;
+    width : 400px;
     margin: 0;
   }
 }
@@ -192,8 +196,8 @@
   z-index: 50;
 
   @media screen and (min-width: calc($tablet)) {
-		@include position (120px, -162px !important);
-		@include size(63px, 240px)
+    @include position (120px, -162px !important);
+    @include size(63px, 240px)
   }
 
   @media screen and (min-width: $desktop-small) {
@@ -206,13 +210,13 @@
   @include size(112px, $conectorWidth);
 
   @media screen and (max-width: calc($desktop-small - 1px)) {
-    height: 120px;
-    width: 220px;
-    position: absolute;
-		top: 35px;
-    left: -115px;
+    height   : 120px;
+    width    : 220px;
+    position : absolute;
+    top      : 35px;
+    left     : -115px;
     transform: scaleX(-1);
-    z-index: 50;
+    z-index  : 50;
   }
 
   @media screen and (min-width: $desktop-small) {
@@ -245,10 +249,12 @@
     @include position(5px, 393px);
     z-index: 1;
   }
-	@media screen and (min-width: $tablet) and (max-width : 810px) {
+
+  @media screen and (min-width: $tablet) and (max-width : 810px) {
     @include size(48px, 220px);
     @include position(-32px, 372px);
   }
+
   @media screen and (min-width: $desktop-small) {
     @include size(55px, $conectorWidth);
     @include position(15px, 345px);
@@ -265,11 +271,13 @@
     @include size(75px, 220px);
     z-index: 1;
   }
-	@media screen and (min-width: $tablet) and (max-width : 810px) {
+
+  @media screen and (min-width: $tablet) and (max-width : 810px) {
     @include size(59px, 220px);
     @include position(-67px, 330px);
-		z-index: 1;
+    z-index: 1;
   }
+
   @media screen and (min-width: $desktop-small) {
     @include position(-35px, 345px);
   }
@@ -324,10 +332,11 @@
     @include position(125px, 478px);
   }
 
-	@media screen and (min-width: $tablet) and (max-width : 810px) {
+  @media screen and (min-width: $tablet) and (max-width : 810px) {
     @include size(90px, 220px);
     @include position(60px, 443px);
   }
+
   @media screen and (min-width: $desktop-small) {
     @include size(120px, $conectorWidth);
     @include position(125px, 422px);
@@ -342,10 +351,12 @@
     @include position(230px, 438px);
     @include size(80px, 220px);
   }
-	@media screen and (min-width: $tablet) and (max-width : 810px) {
+
+  @media screen and (min-width: $tablet) and (max-width : 810px) {
     @include size(60px, 220px);
     @include position(140px, 411px);
   }
+
   @media screen and (min-width: $desktop-small) {
     @include position(235px, 435px);
   }
@@ -397,7 +408,7 @@
 .rumanyFlag {
   @media screen and (max-width: calc($tablet - 1px)) {
     display: none;
-    height: 60px;
+    height : 60px;
   }
 }
 
@@ -408,15 +419,15 @@
 }
 
 .container__country--mobile {
-  display: flex;
-  position: absolute;
+  display       : flex;
+  position      : absolute;
   flex-direction: column;
-  top: 0.5em;
-  left: 8em;
-  align-items: flex-start;
+  top           : 0.5em;
+  left          : 8em;
+  align-items   : flex-start;
 
   @media screen and (width: calc(769px)) {
-    top: 1em;
+    top : 1em;
     left: 14em;
   }
 }
@@ -449,7 +460,8 @@
   @include position(30px, 135px);
   @include size($flagHeightMobile, $flagWidthMobile);
   object-fit: none;
-  z-index: 10;
+  z-index   : 10;
+
   @media screen and (min-width: 530px) and (max-width: 647px) {
     @include position(30px, 260px);
   }
@@ -463,6 +475,7 @@
   @include position(120px, 220px);
   @include size($flagHeightMobile, $flagWidthMobile);
   object-fit: none;
+
   @media screen and (min-width: 530px) and (max-width: 647px) {
     @include position(125px, 350px);
   }
@@ -512,14 +525,15 @@
   @include position(55px, -48px);
   @include size(75px, $conectorWidthMobile);
   object-fit: none;
-  z-index: 10;
+  z-index   : 10;
 }
 
 .germanyConectorMobile {
   @include position(30px, 150px);
   @include size($conectorHeigthMobile, $conectorWidthMobile);
   object-fit: none;
-  z-index: 15;
+  z-index   : 15;
+
   @media screen and (min-width: 530px) and (max-width: 647px) {
     @include position(30px, 275px);
   }
@@ -545,6 +559,7 @@
   @include position(78px, 210px);
   @include size($conectorHeigthMobile, $conectorWidthMobile);
   object-fit: none;
+
   @media screen and (min-width: 530px) and (max-width: 647px) {
     @include position(85px, 340px);
   }

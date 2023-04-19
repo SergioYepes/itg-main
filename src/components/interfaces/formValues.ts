@@ -4,6 +4,7 @@ export default interface FormValueProps {
   formValue: string;
   handleChange: (e: any) => void;
   className?: ClassName;
+  id?: string;
 }
 
 export interface inputFile {
@@ -12,6 +13,7 @@ export interface inputFile {
   fileSizeInKB: number;
   fileName: File | string;
   file: File | string;
+  id?: string;
 }
 export interface formCheckBox {
   checked: boolean;

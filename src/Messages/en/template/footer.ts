@@ -3,7 +3,7 @@ export const footerEnglish = {
   "footer-contact": "Contact us",
   "footer-links-of-interest": "links of interest",
   "footer-data-policy": "Data policy",
-  "footer-about-us": "About us",
+  "footer-about-us": "Contact us",
   "footer-email": "Email : hello@itglobers.com",
   "footer-rights-reserved": "All rights reserved",
 };

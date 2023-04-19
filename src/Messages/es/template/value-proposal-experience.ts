@@ -1,7 +1,7 @@
 export const valueProposalExperienceEs = {
   "value-proposal": "ITGlobers, tu aliado",
   "value-proposal1": "en tu Ecommerce",
-  "value-partner": `¡SOMOS EL **PARTNER DESTACADO** VTEX 2022`,
+  "value-partner": `¡SOMOS EL **PARTNER DESTACADO** VTEX 2022!`,
   "value-button-know": "Conocer más",
   "value-button-talk": "Hablar con ventas",
   "value-proposal-slider1": "sumando valor",

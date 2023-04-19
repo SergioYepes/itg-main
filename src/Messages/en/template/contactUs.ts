@@ -10,9 +10,11 @@ export const contactUs = {
   "contact-file":
     "Attach a supporting document for your quote (RFI, RFP, BRIEF, etc)",
   "contact-project": "Tell us more about your projects",
-  "contact-send": "Learn more",
-  "contact-Cv": "Send Cv",
+  "contact-send": "Send",
+  "contact-Cv": "Send",
   "check-box-accept": "I accept",
   "text-data-of-policy": "data processing policy",
   "check-box-notifications": "I want to receive news, promotions and news",
+  "workWithUs-project": "Tell us more about your self",
+  "workWithUs-file": "Attacht you CV (Max 4MB)"
 };
