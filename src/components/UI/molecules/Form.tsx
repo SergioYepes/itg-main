@@ -26,8 +26,7 @@ function Form() {
     tellUs: "",
   });
 
-  const [notifications, setNotifications] = useState(false);
-  const [sendNotifications, setSendNotifications] = useState("");
+  const [notifications, setNotifications] = useState(false)
   const [dataOfPolicy, setDataOfPolicy] = useState(false);
   const [captchaValue, setCaptchaValue] = useState<string>("");
 
@@ -73,9 +72,6 @@ function Form() {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    notifications === true
-      ? setSendNotifications("yes")
-      : setSendNotifications("no");
     postEmail(
       language === "en" ? "comercial-en" : "comercial",
       file,
@@ -87,7 +83,7 @@ function Form() {
       form.role,
       form.services,
       form.company,
-      sendNotifications,
+      notifications === true ? "yes" : "no",
       language
     );
     setForm({
