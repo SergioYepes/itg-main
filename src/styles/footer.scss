@@ -127,7 +127,7 @@
 				
 				filter: grayscale(100%) brightness(300%);
 				&:hover {
-					transform: scale(1);
+					transition: all 0.7s ease-in-out;
 					filter: none;
 				}
 			}
