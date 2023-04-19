@@ -154,7 +154,7 @@ function WorkWithUS() {
             id={"workWithUs-project"} 
           />
         </div>
-        <div className='container-check-box'>
+        <div className='container-check-box-us'>
           <FormCheckBox
             checked={dataOfPolicy}
             onChange={handleCheckboxChangesetDataOfPolicy}
