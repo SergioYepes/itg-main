@@ -1,5 +1,5 @@
 export const footerEnglish = {
-  "footer-follow": "Follow us :",
+  "footer-follow": "Follow us",
   "footer-contact": "Contact us",
   "footer-links-of-interest": "links of interest",
   "footer-data-policy": "Data policy",
