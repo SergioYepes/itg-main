@@ -34,9 +34,9 @@ export const Language = () => {
     if (menuRef.current) {
       const classList = menuRef.current.classList;
       classList.toggle("active");
-      const miElemento = document.querySelector('.menu__navigation--active');
-      miElemento?.classList.remove("menu__navigation--active")
     }
+    const miElemento = document.querySelector('.menu__navigation--active');
+    miElemento?.classList.remove("menu__navigation--active")
   };
 
   return (
@@ -50,34 +50,34 @@ export const Language = () => {
           <div className="options-container" ref={menuRef}>
             <form onChange={handleLanguageOptions}>
               {
-                language === "en" ? 
-                <div className="option">
-                <input
-                  type="radio"
-                  name="language"
-                  className="radio"
-                  id="es"
-                  value="es"
-                  onClick={handleLanguageOptions}
-                />
-                <label htmlFor="es" className="spanish_value">
-                  {messages[0]}
-                </label>
-              </div> : 
-               <div className="option">
-               <input
-                 type="radio"
-                 name="language"
-                 className="radio"
-                 id="en"
-                 value="en"
-                 onClick={handleLanguageOptions}
-               />
-               <label htmlFor="en" className="english_value">
-                 {messages[1]}
-               </label>
-             </div>
-            }
+                language === "en" ?
+                  <div className="option">
+                    <input
+                      type="radio"
+                      name="language"
+                      className="radio"
+                      id="es"
+                      value="es"
+                      onClick={handleLanguageOptions}
+                    />
+                    <label htmlFor="es" className="spanish_value">
+                      {messages[0]}
+                    </label>
+                  </div> :
+                  <div className="option">
+                    <input
+                      type="radio"
+                      name="language"
+                      className="radio"
+                      id="en"
+                      value="en"
+                      onClick={handleLanguageOptions}
+                    />
+                    <label htmlFor="en" className="english_value">
+                      {messages[1]}
+                    </label>
+                  </div>
+              }
             </form>
           </div>
           <div className="selected">

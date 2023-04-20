@@ -14,11 +14,30 @@ import canadaFlagMobile from "../Countries/CountriesMobile/CanadaMobile.svg";
 import canadaConectorMobile from "../Countries/CountriesMobile/CanadaConectorMobile.svg";
 import englishFlagCanada from "../englishFlagCanada.svg";
 
+import spainFlagMobile from "../Countries/CountriesMobile/flagEspaña.svg"
+import spainConectorMobile from "../Countries/CountriesMobile/conectorEspaña.svg"
+import spainFlag from "./spainFlag.svg"
+import englishFlagSpain from "./englishSpainFlag.svg";
+import spainConnector from "./ConnectorSpain.svg"
+
+import franceFlagMobile from "../Countries/CountriesMobile/FranceFlagMobile.svg"
+import franceConectorMobile from "../Countries/CountriesMobile/ConetorFranceFlagMobile.svg"
+import franceFlag from "./franceFlag.svg"
+import englishFlagFrance from "./englishFranceFlag.svg";
+import franceConnector from "./ConnectorFrance.svg"
+
 import germanyFlag from "../GermanyFlag.svg";
 import germanyConector from "../GermanyConector.svg";
 import germanyFlagMobile from "../Countries/CountriesMobile/GermanyMobile.svg";
 import germanyConectorMobile from "../Countries/CountriesMobile/GermanyConectorMobile.svg";
 import englishFlagGermany from "../englishFlagGermany.svg";
+
+import italyFlagMobile from "../Countries/CountriesMobile/italyFlagMobile.svg"
+import italyConectorMobile from "../Countries/CountriesMobile/italyConectorMobile.svg"
+import italyFlag from "./italiaFlag.svg"
+import englishFlagItaly from "./englishFlagItaly.svg";
+import italyConnector from "./connectorItaly.svg"
+
 
 import mexicoFlag from "../MexicoBandera.svg";
 import mexicoFlagMobile from "../Countries/CountriesMobile/MexicoMobile.svg";
@@ -70,12 +89,36 @@ const countries = [
     Conector: canadaConector,
   },
   {
+    name: "spain",
+    FlagSpanish: spainFlag,
+    FlagEnglish: englishFlagSpain,
+    FlagMobile: spainFlagMobile,
+    ConectorMobile: spainConectorMobile,
+    Conector: spainConnector,
+  },
+  {
+    name: "france",
+    FlagSpanish: franceFlag,
+    FlagEnglish: englishFlagFrance,
+    FlagMobile: franceFlagMobile,
+    ConectorMobile: franceConectorMobile,
+    Conector: franceConnector,
+  },
+  {
     name: "germany",
     FlagSpanish: germanyFlag,
     FlagEnglish: englishFlagGermany,
     FlagMobile: germanyFlagMobile,
     ConectorMobile: germanyConectorMobile,
     Conector: germanyConector,
+  },
+  {
+    name: "italy",
+    FlagSpanish: italyFlag,
+    FlagEnglish: englishFlagItaly,
+    FlagMobile: italyFlagMobile,
+    ConectorMobile: italyConectorMobile,
+    Conector: italyConnector,
   },
   {
     name: "mexico",

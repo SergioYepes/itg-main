@@ -114,7 +114,7 @@ export const Countries = () => {
                 <img
                   src={englishFlagUsa}
                   alt="estadosU Flag"
-                  className="estadosFlag usaFlag"
+                  className="usaFlag"
                 />
               )
             ) : (

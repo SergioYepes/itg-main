@@ -11,6 +11,7 @@ import FormTextarea from "../atoms/FormTextarea";
 import ReCAPTCHA from "react-google-recaptcha";
 import { postEmail, Form as typeForm } from "../../../axios/emailPost";
 import LanguageContext from "../../../context/language";
+import { log } from "console";
 
 function Form() {
   const { language } = useContext(LanguageContext);
@@ -26,7 +27,7 @@ function Form() {
     tellUs: "",
   });
 
-  const [notifications, setNotifications] = useState(false)
+  const [notifications, setNotifications] = useState(false);
   const [dataOfPolicy, setDataOfPolicy] = useState(false);
   const [captchaValue, setCaptchaValue] = useState<string>("");
 
@@ -35,6 +36,7 @@ function Form() {
   ) => {
     setDataOfPolicy(event.target.checked);
   };
+
 
   const handleCheckboxChangeNotifications = (
     event: React.ChangeEvent<HTMLInputElement>
@@ -72,6 +74,7 @@ function Form() {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
+
     postEmail(
       language === "en" ? "comercial-en" : "comercial",
       file,

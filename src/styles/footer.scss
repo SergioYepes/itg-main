@@ -115,7 +115,7 @@
 			width        : 128px;
 			height       : 56px;
 			border-radius: 4px;
-
+			
 			@media screen and (max-width: $desktop-small) {
 				margin: 0 15%;
 			}
@@ -149,7 +149,6 @@
 			font-size  : 18px;
 			margin-top : 0;
 			margin-bottom: 0;
-
 
 			@media screen and (max-width: $desktop-small) {
 				margin: 0 15% 20px;

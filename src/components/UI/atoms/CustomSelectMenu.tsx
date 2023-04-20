@@ -19,6 +19,8 @@ const Dropdown = ({ options }: DropdownProps) => {
   const handleOptionClick = (option: Option) => {
     setSelectedOption(option);
     setIsOpen(false);
+    const miElemento = document.querySelector('.menu__navigation--active');
+    miElemento?.classList.remove("menu__navigation--active")
   };
 
   return (
