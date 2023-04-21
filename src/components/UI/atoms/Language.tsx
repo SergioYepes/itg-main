@@ -35,8 +35,8 @@ export const Language = () => {
       const classList = menuRef.current.classList;
       classList.toggle("active");
     }
-    const miElemento = document.querySelector('.menu__navigation--active');
-    miElemento?.classList.remove("menu__navigation--active")
+    const deactivateNavBar = document.querySelector('.menu__navigation--active');
+    deactivateNavBar?.classList.remove("menu__navigation--active")
   };
 
   return (

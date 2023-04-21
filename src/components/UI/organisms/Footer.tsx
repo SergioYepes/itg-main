@@ -29,7 +29,7 @@ export const Footer = () => {
               {(message) => <h3>{message}</h3>}
             </FormattedMessage>
             <FormattedMessage id="footer-email">
-            {(message) => <h5>{message} <a href="mailto:%20hello@itglobers.com">hello@itglobers.com</a> </h5>}
+              {(message) => <h5>{message} <a href="mailto:%20hello@itglobers.com">hello@itglobers.com</a> </h5>}
             </FormattedMessage>
           </div>
         </div>

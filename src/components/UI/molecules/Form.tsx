@@ -59,8 +59,8 @@ function Form() {
           language === "en"
             ? alert("incorrect file size, max file size is 4MB")
             : alert(
-                "Tamaño de archivo incorrecto, el tamaño máximo de archivo es de 4MB"
-              );
+              "Tamaño de archivo incorrecto, el tamaño máximo de archivo es de 4MB"
+            );
           setFile("");
         } else {
           setFile(selectedFile);
@@ -105,12 +105,11 @@ function Form() {
 
   function handleChange(e: any) {
     const newValue = e.target.value;
-    // if (/^[A-Za-z]+$/.test(newValue) || newValue === "") {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
     });
-    // }
+
   }
 
   return (
@@ -203,7 +202,7 @@ function Form() {
         formValue={form.tellUs}
         handleChange={handleChange}
         className={"contact--textarea"}
-        id={"contact-project"} 
+        id={"contact-project"}
       />
       <section className="container-check-box">
         <FormCheckBox

@@ -11,7 +11,7 @@ export const Header = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1240);
 
-  const headerdeskto = showHeader ? "header" : "header-hidden";
+  const headerdesktop = showHeader ? "header" : "header-hidden";
   
   useEffect(() => {
     function handleResize() {
@@ -35,7 +35,7 @@ export const Header = () => {
 
 
   return (
-    <header className={isMobile ? "header" : headerdeskto}>
+    <header className={isMobile ? "header" : headerdesktop}>
       <div className="header__container">
         <div className="header__logo">
           <Link to="/">

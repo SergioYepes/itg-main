@@ -20,13 +20,9 @@ import { PolicyData } from "./en/template/PolicyData";
 export const allmessages = {
   es: {
     ...headerSpanish,
-    //First section spanish
     ...valueProposalExperienceEs,
-    //second section spanish
     ...servicesEs,
-    //third section spanish
     ...containerCountryEs,
-    //fourth section spanish
     ...reviewsEs,
     ...paragraphReviewsEs,
     ...contactUsEs,
@@ -35,13 +31,9 @@ export const allmessages = {
   },
   en: {
     ...headerEnglish,
-    //First section english
     ...valueProposalExperience,
-    //second section english
     ...services,
-    //third section english
     ...containerCountry,
-    //fourth section
     ...reviews,
     ...paragraphReviews,
     ...contactUs,

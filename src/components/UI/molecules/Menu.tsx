@@ -8,13 +8,21 @@ import Dropdown from '../atoms/CustomSelectMenu';
 import { Language } from '../atoms/Language';
 
 const options = [
-  { value: 'Quienes somos', id: 'who-we-are', link: '#who-we-are' },
+  {
+    value: 'Quienes somos',
+    id: 'who-we-are',
+    link: '#who-we-are'
+  },
   {
     value: 'Casos de éxito',
     id: 'success-histories',
     link: '#success-histories',
   },
-  { value: 'Nuestros clientes', id: 'Our-clients', link: '#Our-clients' },
+  {
+    value: 'Nuestros clientes',
+    id: 'Our-clients',
+    link: '#Our-clients'
+  },
 ];
 
 export const Menu = () => {
@@ -46,6 +54,7 @@ export const Menu = () => {
                 </Link>
               )}
             </FormattedMessage>
+            {/* Secciones del Navbar Eliminadas */}
             {/* <FormattedMessage id="header-solutions">
               {(message) => <li className="menu__item">{message}</li>}
             </FormattedMessage>
@@ -59,7 +68,7 @@ export const Menu = () => {
                   onClick={toggleMenu}
                   className={
                     location.pathname === '/contact' ||
-                    location.pathname === '/policy'
+                      location.pathname === '/policy'
                       ? 'active'
                       : ''
                   }

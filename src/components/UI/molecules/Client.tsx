@@ -5,7 +5,7 @@ import { FormattedMessage } from "react-intl";
 import ReactMarkdown from "react-markdown";
 import "swiper/css/grid";
 import "../../../styles/client.scss";
-import imageClints from "../../../assets/img/clients/data";
+import imageClients from "../../../assets/img/clients/data";
 
 export const Client = () => {
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
@@ -51,7 +51,7 @@ export const Client = () => {
           className="client__slider--grid"
         >
           <Swiper>
-            {imageClints.map((image, index) => (
+            {imageClients.map((image, index) => (
               <SwiperSlide key={index}>
                 <picture className="client__image">
                   <a href={image.link} target="_blank" rel="noreferrer">

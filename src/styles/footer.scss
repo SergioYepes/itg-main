@@ -20,8 +20,8 @@
 	font-style      : normal;
 	font-weight     : 600;
 	font-size       : 18px;
-	position: relative;
-	z-index: 20;
+	position        : relative;
+	z-index         : 20;
 
 	a {
 		text-decoration: none;
@@ -115,7 +115,7 @@
 			width        : 128px;
 			height       : 56px;
 			border-radius: 4px;
-			
+
 			@media screen and (max-width: $desktop-small) {
 				margin: 0 15%;
 			}
@@ -124,13 +124,14 @@
 				width : 24px;
 				height: 24px;
 				margin: 10px 15px;
-				
 				filter: grayscale(100%) brightness(300%);
+
 				&:hover {
 					transition: all 0.7s ease-in-out;
-					filter: none;
+					filter    : none;
 				}
 			}
+
 			.logo__linkedin {
 				margin-left: 5px;
 			}
@@ -143,11 +144,11 @@
 		}
 
 		h3 {
-			font-family: 'Montserrat';
-			font-style : normal;
-			font-weight: 600;
-			font-size  : 18px;
-			margin-top : 0;
+			font-family  : 'Montserrat';
+			font-style   : normal;
+			font-weight  : 600;
+			font-size    : 18px;
+			margin-top   : 0;
 			margin-bottom: 0;
 
 			@media screen and (max-width: $desktop-small) {

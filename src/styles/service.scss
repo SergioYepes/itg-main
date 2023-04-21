@@ -42,8 +42,6 @@
 
   &__item-left {
     padding-top   : 85px;
-    // width      : 40%;
-    // margin-left: 30px;
 
     @media screen and (min-width: $tablet) {
       padding-top: 40px;
@@ -182,11 +180,9 @@
     font-size      : 14px;
     font-weight    : 400;
     background     : #ffffff;
-    //box-shadow   : 0px 10px 30px rgb(29 39 52 / 15%);
     border-radius  : 8px;
     padding        : 0 10px 0 20px;
     z-index        : 1;
-    //width        : 19em;
     height         : 22em;
     line-height    : 2rem;
 
@@ -227,7 +223,6 @@
     left         : 0;
     right        : 0;
     bottom       : 0;
-    // padding   : 0 1.5em 0 2em;
 
     @media screen and (min-width: $tablet) {
       width     : 60%;
@@ -251,7 +246,6 @@
   }
 
   & .swiper-initialized {
-    // max-height: 608px;
     overflow  : hidden;
     min-height: 760px;
     min-width : 100%;
@@ -325,24 +319,31 @@
 .container.service__container {
   max-width: 90vw;
   height   : 810px;
-@media screen and (min-width: 490px) {
-  height   : 870px;
-}
-@media screen and (min-width: 535px) {
-  height   : 910px;
-}
-@media screen and (min-width: 590px) {
-  height   : 950px;
-}
-@media screen and (min-width: 630px) {
-  height   : 990px;
-}
-@media screen and (min-width: 685px) {
-  height   : 1030px;
-}
-@media screen and (min-width: 725px) {
-  height   : 1060px;
-}
+
+  @media screen and (min-width: 490px) {
+    height: 870px;
+  }
+
+  @media screen and (min-width: 535px) {
+    height: 910px;
+  }
+
+  @media screen and (min-width: 590px) {
+    height: 950px;
+  }
+
+  @media screen and (min-width: 630px) {
+    height: 990px;
+  }
+
+  @media screen and (min-width: 685px) {
+    height: 1030px;
+  }
+
+  @media screen and (min-width: 725px) {
+    height: 1060px;
+  }
+
   @media screen and (min-width: $tablet) {
     max-width : max-content;
     max-height: 570px;

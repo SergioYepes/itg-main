@@ -13,9 +13,6 @@ export const PolicyMenu = () => {
   const [isMobileHeight, setIsMobileHeight] = useState<boolean>(window.innerHeight < 868);
   const [isTabletHeight, setIsTabletHeight] = useState<boolean>(window.innerHeight < 1200);
 
-
-
-  
   const [display, setDisplay] = useState(false);
   const options = [
     "Introduction",
@@ -50,7 +47,7 @@ export const PolicyMenu = () => {
     "Procedencia Titular",
     "Actualizacion",
   ];
-  
+
 
   const toggleOptions = (index: number) => {
     setActiveButton(index === activeButton ? null : index);
@@ -68,8 +65,6 @@ export const PolicyMenu = () => {
       setIsTablet(window.innerHeight < 1240);
       setIsMobileHeight(window.innerHeight < 868);
       setIsTabletHeight(window.innerHeight < 1200);
-
-
     }
 
     window.addEventListener("resize", handleResize);
@@ -85,7 +80,7 @@ export const PolicyMenu = () => {
     const handleScroll = () => {
       const scrollPosition = policyContainer?.scrollTop + 90;
       const optionsElements = document.querySelectorAll(".policyMenuOption");
-      
+
 
       optionsElements.forEach((option, index) => {
         const section = document.querySelector(
@@ -94,30 +89,30 @@ export const PolicyMenu = () => {
         const top = section?.offsetTop;
         const bottom = top + section?.offsetHeight;
         const scrollable = policyContainer.scrollHeight - window.innerHeight
-        
-       
-        if(isTablet && isTabletHeight && scrollPosition >= scrollable-400 ) {
-          setActiveButton(options.length-1);
-          setActiveMobile(language === "en" ? optionsEnMob[options.length-1] : optionsEsMob[options.length-1]);
-          setFinalPosition(true)
-          
-        } 
-        else if(isMobile && isMobileHeight && scrollPosition >= scrollable-250 ) {
-          setActiveButton(options.length-1);
-          setActiveMobile(language === "en" ? optionsEnMob[options.length-1] : optionsEsMob[options.length-1]);
-          setFinalPosition(true)
-        } 
-        else if(isMobile && scrollPosition >= scrollable-200 ) {
-          setActiveButton(options.length-1);
-          setActiveMobile(language === "en" ? optionsEnMob[options.length-1] : optionsEsMob[options.length-1]);
-          setFinalPosition(true)
-        } 
 
-       else if(scrollPosition >= scrollable-150 ) {
-          setActiveButton(options.length-1);
-          setActiveMobile(language === "en" ? optionsEnMob[options.length-1] : optionsEsMob[options.length-1]);
+
+        if (isTablet && isTabletHeight && scrollPosition >= scrollable - 400) {
+          setActiveButton(options.length - 1);
+          setActiveMobile(language === "en" ? optionsEnMob[options.length - 1] : optionsEsMob[options.length - 1]);
           setFinalPosition(true)
-        } 
+
+        }
+        else if (isMobile && isMobileHeight && scrollPosition >= scrollable - 250) {
+          setActiveButton(options.length - 1);
+          setActiveMobile(language === "en" ? optionsEnMob[options.length - 1] : optionsEsMob[options.length - 1]);
+          setFinalPosition(true)
+        }
+        else if (isMobile && scrollPosition >= scrollable - 200) {
+          setActiveButton(options.length - 1);
+          setActiveMobile(language === "en" ? optionsEnMob[options.length - 1] : optionsEsMob[options.length - 1]);
+          setFinalPosition(true)
+        }
+
+        else if (scrollPosition >= scrollable - 150) {
+          setActiveButton(options.length - 1);
+          setActiveMobile(language === "en" ? optionsEnMob[options.length - 1] : optionsEsMob[options.length - 1]);
+          setFinalPosition(true)
+        }
         else if (
           scrollPosition &&
           top &&
@@ -128,11 +123,10 @@ export const PolicyMenu = () => {
           setActiveButton(index);
           setActiveMobile(language === "en" ? optionsEnMob[index] : optionsEsMob[index]);
           setFinalPosition(true)
-          // setSemiFinalPosition(false)
         }
-        
+
       });
-     
+
     };
 
     if (policyContainer) {
@@ -151,9 +145,8 @@ export const PolicyMenu = () => {
         {options.map((option, index) => (
           <a
             href={`#${option}`}
-            className={`policyMenuOption ${
-              activeButton === index ? "active" : ""
-            }`}
+            className={`policyMenuOption ${activeButton === index ? "active" : ""
+              }`}
             onClick={() => toggleOptions(index)}
             key={index}
           >
@@ -164,7 +157,7 @@ export const PolicyMenu = () => {
         ))}
       </div>
 
-      <div className={finalPosition ? "policyMenuMobileFinal" :"policyMenuContMobile" }>
+      <div className={finalPosition ? "policyMenuMobileFinal" : "policyMenuContMobile"}>
         <div className="dropdown-button" onClick={handleClick}>
           {activeMobile || "Select"}
         </div>
@@ -173,9 +166,8 @@ export const PolicyMenu = () => {
             {options.map((option, index) => (
               <li
                 key={index}
-                className={`policyListOptions ${
-                  activeButton === index ? "active" : ""
-                }`}
+                className={`policyListOptions ${activeButton === index ? "active" : ""
+                  }`}
                 onClick={() => toggleOptions(index)}
               >
                 <a href={`#${option}`}>

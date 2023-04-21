@@ -2,10 +2,10 @@
 @import "./partials/mixins";
 
 .policy-Big {
-	height  : 140vh;
-	overflow: scroll;
+	height    : 140vh;
+	overflow  : scroll;
 	margin-top: 30px;
-	
+
 
 	&::-webkit-scrollbar {
 		opacity: 0;
@@ -65,42 +65,42 @@
 	align-items   : flex-start;
 	flex-direction: column;
 	margin        : 30px;
-	@media screen and (min-width: calc($tablet - 1px) ) and (min-height: 900px){
-		min-height : 7400px !important;
+
+	@media screen and (min-width: calc($tablet - 1px)) and (min-height: 900px) {
+		min-height: 7400px !important;
 	}
-	@media screen and (min-width: calc($tablet + 100px) ) and (min-height: 900px){
-		min-height : 6900px !important;
+
+	@media screen and (min-width: calc($tablet + 100px)) and (min-height: 900px) {
+		min-height: 6900px !important;
 	}
-	@media screen and (min-width:$desktop-small) and (min-height: 900px){
-		min-height : 6400px !important;
+
+	@media screen and (min-width:$desktop-small) and (min-height: 900px) {
+		min-height: 6400px !important;
 	}
+
 	@media screen and (min-width:$desktop-small) {
-		min-height : 5700px;
+		min-height: 5700px;
 	}
+
 	@media screen and (min-width:$desktop-large) {
 		margin-left: 610px;
 		min-height : 5700px !important;
 	}
+
 	@media screen and (min-width:$desktop-large) and (min-height: 900px) {
 		margin-left: 610px;
 		min-height : 5700px !important;
 	}
-	@media screen and (min-width:$wide-screen)  {
+
+	@media screen and (min-width:$wide-screen) {
 		margin-left: 610px;
-		min-height : 5000px !important; 
+		min-height : 5000px !important;
 	}
+
 	@media screen and (min-width:$wide-screen) and (min-height: 900px) {
 		margin-left: 610px;
-		min-height : 5000px !important; 
+		min-height : 5000px !important;
 	}
-	// @media screen and (min-width: 1850px) {
-	// 	margin-left: 610px;
-	// 	min-height : 5800px;
-	// }
-	// @media screen and (min-width: 2000px) {
-	// 	margin-left: 610px;
-	// 	min-height : 5000px;
-	// }
 }
 
 .policyContent {
@@ -129,31 +129,38 @@
 	display       : flex;
 	flex-direction: column-reverse;
 	align-items   : center;
+
 	@media screen and (min-width:320px) {
-		right         : -180px;
+		right: -180px;
 	}
+
 	@media screen and (min-width:450px) {
-		right         : -220px;
+		right: -220px;
 	}
+
 	@media screen and (min-width:550px) {
-		right         : -260px;
+		right: -260px;
 	}
+
 	@media screen and (min-width:650px) {
-		right         : -310px;
+		right: -310px;
 	}
+
 	@media screen and (min-width:$tablet) {
-		right         : -350px;
+		right: -350px;
 	}
+
 	@media screen and (min-width:$desktop-small) {
-		right         : -550px;
-		bottom				: 40px
+		right : -550px;
+		bottom: 40px
 	}
 
 	@media screen and (min-width:$desktop-large) {
 		display: none !important;
 	}
 }
-.policyMenuMobileFinal{
+
+.policyMenuMobileFinal {
 	@extend .policyMenuContMobile;
 	bottom: 40px
 }
@@ -190,22 +197,27 @@
 	flex-direction : row;
 	justify-content: center;
 	align-items    : center;
+
 	@media screen and (min-width :320px) {
-		width          : 150px;
+		width: 150px;
 	}
+
 	@media screen and (min-width:450px) {
-		width         : 200px;
+		width: 200px;
 	}
+
 	@media screen and (min-width:550px) {
-		width         : 250px;
+		width: 250px;
 	}
+
 	@media screen and (min-width:650px) {
-		width         : 300px;
+		width: 300px;
 	}
+
 	@media screen and (min-width:$tablet) {
-		width         : 350px;
+		width: 350px;
 	}
-	
+
 }
 
 
@@ -220,20 +232,25 @@
 	overflow      : scroll;
 	flex-direction: column;
 	gap           : 15px;
+
 	@media screen and (min-width : 320px) {
-		width          : 150px;
+		width: 150px;
 	}
+
 	@media screen and (min-width : 450px) {
-		width         : 200px;
+		width: 200px;
 	}
+
 	@media screen and (min-width : 550px) {
-		width         : 250px;
+		width: 250px;
 	}
+
 	@media screen and (min-width:650px) {
-		width         : 300px;
+		width: 300px;
 	}
+
 	@media screen and (min-width:$tablet) {
-		width         : 350px;
+		width: 350px;
 	}
 
 	&::-webkit-scrollbar {
@@ -254,32 +271,37 @@
 	color          : #1D2734;
 	padding        : 0 20px;
 	height         : auto;
+
 	@media screen and (min-width :320px) {
-		padding: 0 5px;
-		font-size: 10px;
+		padding       : 0 5px;
+		font-size     : 10px;
 		letter-spacing: -0.85px;
 	}
+
 	@media screen and (min-width:450px) {
-		padding: 0 5px;
+		padding  : 0 5px;
 		font-size: 11px;
 	}
+
 	@media screen and (min-width:550px) {
-		padding: 0 5px;
-		font-size: 12px;
+		padding       : 0 5px;
+		font-size     : 12px;
 		letter-spacing: 0;
 	}
+
 	@media screen and (min-width:650px) {
-		padding: 0 10px;
-		font-size: 13px;
+		padding       : 0 10px;
+		font-size     : 13px;
 		letter-spacing: 0.15px;
 	}
+
 	& a {
 		text-decoration: none;
 	}
 }
 
-.translateCont{
-	& .selection_languaje{
+.translateCont {
+	& .selection_languaje {
 		top: 60px
 	}
 }

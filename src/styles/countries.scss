@@ -28,11 +28,19 @@
   font-size  : 4rem;
   line-height: 4.8rem;
   font-weight: 700;
+
+  @media screen and (min-width: $desktop-small) and (max-width : 1220px) {
+    font-size: 3rem;
+  }
 }
 
 .paragraph__country {
   font-size  : 2rem;
   line-height: 3.2rem;
+
+  @media screen and (min-width: $desktop-small) and (max-width : 1220px) {
+    font-size: 1.7rem;
+  }
 }
 
 .bigImage__countryContainer {
@@ -45,7 +53,7 @@
   width : 90%;
   margin: 0 auto;
 
-  @media screen and (min-width: $desktop-small) {
+  @media screen and (min-width: 1221px) {
     width      : 35%;
     margin     : 0;
     margin-left: 3em;
@@ -172,7 +180,6 @@
 .canadaConector {
   @include position(-30px, 70px);
   @include size(98px, 135px);
-
 }
 
 .franceFlag {
@@ -282,13 +289,8 @@
 }
 
 .usaFlag {
-  @include position(210px, -245px);
-  @include size(90px, 220px);
-
-  @media screen and (min-width: calc($tablet)) {
-    @include position (103px, -175px !important);
-    @include size(63px, 240px)
-  }
+  @include position (103px, -175px !important);
+  @include size(63px, 240px);
 
   @media screen and (min-width: $desktop-small) {
     @include position(167px, -330px !important);
@@ -296,13 +298,9 @@
 }
 
 .estadosFlag {
-  @include position(210px, -245px);
-  @include size(90px, 220px);
 
-  @media screen and (min-width: calc($tablet)) {
-    @include position (103px, -175px !important);
-    @include size(63px, 240px)
-  }
+  @include position (103px, -175px !important);
+  @include size(63px, 240px);
 
   @media screen and (min-width: $desktop-small) {
     @include position(167px, -349px !important);
@@ -311,36 +309,30 @@
 
 .estadosConector {
 
+  @include size(86px, 220px);
+  @include position(115px, -183px);
+
   @media screen and (max-width: calc($desktop-small - 1px)) {
-    height   : 100px;
-    width    : 220px;
-    position : absolute;
-    top      : 35px;
-    left     : -90px;
+    @include size (100px, 220px);
+    @include position (35px, -90px);
     transform: scaleX(-1);
   }
 
   @media screen and (min-width: $desktop-small) {
-    @include size(86px, 220px);
-    @include position(115px, -183px);
     z-index: 51;
   }
+
 }
 
 .estadosConector2 {
-  @include position(144px, -52px);
-  @include size(112px, $conectorWidth);
-  z-index: -100;
+  @include size(186px, $conectorWidth);
+  @include position(15px, -205px);
+  z-index: 2;
 
   @media screen and (max-width: calc($desktop-small - 1px)) {
     display: none;
   }
 
-  @media screen and (min-width: $desktop-small) {
-    @include size(186px, $conectorWidth);
-    @include position(15px, -205px);
-    z-index: 2;
-  }
 }
 
 .germanyConector {

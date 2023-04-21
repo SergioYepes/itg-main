@@ -208,14 +208,17 @@
 			bottom        : 0%;
 			right         : 0;
 			margin        : auto;
+
 			@media screen and (min-width: calc($desktop-small)) and (max-width:1070px) {
 				left: 308px !important;
 				top : -520px;
 			}
+
 			@media screen and (min-width: 1071px) and (max-width:1160px) {
 				left: 325px !important;
 				top : -520px;
 			}
+
 			@media screen and (min-width: $desktop-small) {
 				left: 350px;
 				top : -520px;
