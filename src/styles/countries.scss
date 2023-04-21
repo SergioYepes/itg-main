@@ -322,7 +322,7 @@
 
   @media screen and (min-width: $desktop-small) {
     @include size(86px, 220px);
-    @include position(115px, -168px);
+    @include position(115px, -183px);
     z-index: 51;
   }
 }
