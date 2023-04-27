@@ -9,14 +9,17 @@
     margin: 0 auto;
   }
 
-  &::-webkit-scrollbar {
-    opacity: 0;
-  }
-
   @media screen and (min-width: $tablet) {
-    height     : 616px;
-    overflow   : auto;
+    height     : 1070px;
     padding-top: 40px;
+    margin-left: 400px;
+  }
+  @media screen and (min-width: $desktop-small) {
+    margin-left: 540px;
+  }
+  @media screen and (min-width: 830px) and (max-width: calc($desktop-small - 1px) ) {
+    margin-left: 420px;
+    
   }
 
   @media screen and (min-width: $tablet) and (max-width: $desktop-small) {

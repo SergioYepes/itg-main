@@ -1,46 +1,56 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay, Pagination } from "swiper";
+import { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay, Pagination } from 'swiper';
 
-import { Review } from "../atoms/Review";
-import { FormattedMessage } from "react-intl";
-import ReactMarkdown from "react-markdown";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "../../../styles/reviews.scss";
-import reviewClient from "../../../assets/img/reviews/data";
+import { Review } from '../atoms/Review';
+import { FormattedMessage } from 'react-intl';
+import ReactMarkdown from 'react-markdown';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import '../../../styles/reviews.scss';
+import reviewClient from '../../../assets/img/reviews/data';
 
 export const Reviews = () => {
+  const [isTablet, setTablet] = useState<boolean>(window.innerWidth < 1024);
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
+  const [slidesPerView, setSlidesPerView] = useState(3);
+
+  useEffect(() => {
+    setSlidesPerView(isMobile ? 1 : isTablet ? 2 : 3);
+    function handleResize() {
+      setTablet(window.innerWidth < 1024);
+      setIsMobile(window.innerWidth < 768);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isTablet, isMobile]);
   return (
-    <div className="reviews">
-      <div className="container__text">
-        <FormattedMessage id="reviews-title">
-          {(message) => (
-            <ReactMarkdown className="reviews__title">
+    <div className='reviews'>
+      <div className='container__text'>
+        <FormattedMessage id='reviews-title'>
+          {message => (
+            <ReactMarkdown className='reviews__title'>
               {`${message}`}
             </ReactMarkdown>
           )}
         </FormattedMessage>
       </div>
-      <div className="container">
+      <div className='container'>
         <Swiper
           modules={[Navigation, Autoplay, Pagination]}
           loop={true}
           spaceBetween={22}
-          breakpoints={{
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
+          slidesPerView={slidesPerView}
           navigation
           autoplay={{
             delay: 6000,
           }}
           pagination={{
-            type: "bullets",
+            type: 'bullets',
             clickable: true,
           }}
         >
@@ -49,7 +59,7 @@ export const Reviews = () => {
               <Review
                 review={
                   <FormattedMessage id={item.id}>
-                    {(message) => <ReactMarkdown>{`${message}`}</ReactMarkdown>}
+                    {message => <ReactMarkdown>{`${message}`}</ReactMarkdown>}
                   </FormattedMessage>
                 }
                 name={item.name}

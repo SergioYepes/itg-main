@@ -14,7 +14,7 @@ const Contact = () => {
           {(message) => <h1 className="contact-level-title">{message}</h1>}
         </FormattedMessage>
         <div className="contact__form--and--image">
-          <section>
+          <section className="contact__section">
             <div className="container__image">
               <img
                 className="form--image"

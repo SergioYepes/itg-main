@@ -52,7 +52,6 @@
 	display       : flex;
 	width         : 140px;
 	flex-direction: column;
-
 }
 
 
@@ -60,11 +59,11 @@
 	background-color: #480095;
 	color           : #ffffff;
 	max-height      : 0;
-	width           : 100%;
+	width           : 140px;
 	opacity         : 0;
 	transition      : all 0.5s;
 	overflow        : hidden;
-	border-radius   : 0px 0px 8px 8px;
+	border-radius   : 0px 0px 5px 5px;
 	margin-top      : -16px;
 	padding-bottom  : 5px;
 	padding-top     : 20px;
@@ -100,7 +99,7 @@
 }
 
 .selected-box .options-container.active {
-	max-height: 140px;
+	max-height: 60px;
 	opacity   : 1;
 }
 
@@ -113,14 +112,13 @@
 .selected {
 	padding      : 7px 24px;
 	cursor       : pointer;
-	border-radius: 8px;
+	border-radius: 5px;
 	height       : 40px;
 }
 
 .selected-box .option:hover {
 	background-color: #ffffff;
 	color           : #480095;
-	border-radius   : 10px;
 }
 
 .selected-box label {

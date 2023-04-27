@@ -3,6 +3,11 @@
 .contact-cont {
 	padding-top     : 100px;
 	background-color: #E7EDF9;
+	overflow: scroll;
+	height: 140vh;
+	&::-webkit-scrollbar {
+    opacity: 0;
+  }
 
 	.custom-file-upload {
 		display         : inline-block;
@@ -100,9 +105,28 @@
 		}
 
 		.contact__form--and--image {
+			.contact__section {
+				@media screen and (min-width: $tablet){
+					position: absolute;
+					top: 315px;
+					left: 45px;
+					
+				}
+				@media screen and (min-width: $desktop-large){
+					left: 110px;
+				}
+				@media screen and (min-width: $wide-screen){
+					left: 175px;
+				}
+			}
 			@media screen and (min-width: $desktop-small) {
+				overflow: scroll;
+				height: 114vh;
 				display        : flex;
 				justify-content: space-evenly;
+				&::-webkit-scrollbar {
+					opacity: 0;
+				}
 			}
 
 			.container__image {

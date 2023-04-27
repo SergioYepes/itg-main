@@ -36,7 +36,7 @@ const testimonyShopping = [
     image: paak,
     alt: 'soporte y mantenimiento',
     className: 'image_slider__testimony',
-    link: 'https://www.paak.com.co/',
+    link: 'http://paak.com.co/',
   },
   {
     id: 'Morado',
@@ -63,7 +63,7 @@ const testimonyShopping = [
     image: jumbo,
     alt: 'soporte y mantenimiento',
     className: 'image_slider__testimony',
-    link: 'https://www.easy.com.co/',
+    link: 'https://www.tiendasjumbo.co/',
   },
   {
     id: 'Olimpica',
@@ -81,7 +81,7 @@ const testimonyShopping = [
     image : velez,
     alt: "soporte y mantenimiento",
     className: "image_slider__testimony",
-    link: "https://www.sony.com.co/",
+    link: "https://www.velez.com.co/",
   },
 ];
 
