@@ -1,6 +1,11 @@
 @import './partials/general';
 
 .contacts__form {
+  
+
+
+
+
   display       : flex;
   flex-direction: column;
   gap           : 15px;
@@ -10,16 +15,7 @@
   }
 
   @media screen and (min-width: $tablet) {
-    height     : 1070px;
     padding-top: 40px;
-    margin-left: 400px;
-  }
-  @media screen and (min-width: $desktop-small) {
-    margin-left: 540px;
-  }
-  @media screen and (min-width: 830px) and (max-width: calc($desktop-small - 1px) ) {
-    margin-left: 420px;
-    
   }
 
   @media screen and (min-width: $tablet) and (max-width: $desktop-small) {
