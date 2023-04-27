@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 import { Translate } from "../UI/molecules/Translate";
 import { FormattedMessage } from "react-intl";
 import formImg from "../../assets/img/formImg.png";
@@ -8,14 +7,11 @@ import Form from "../UI/molecules/Form";
 import "../../styles/contact.scss";
 
 const Contact = () => {
+
   const [changeBottom, setChangeBottom] = useState<boolean>(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1240);
 
-  const getContactInfoSize = () => {
-    const contactInfoHeight= document.getElementById("contactInfo")?.clientHeight;
-    return contactInfoHeight;
-  }
 
   const contentDesktop = changeBottom ? "content" : "content-hidden";
 
@@ -44,8 +40,8 @@ const Contact = () => {
       <Translate />
       <div className="contact-imgCont">
         <div className="contact__form--and--image">
-          <section className="contact__section" id="contactInfo">
-            <div className={ `contact__inner ${contentDesktop}` }>
+          <section className="contact__section">
+          <div className={ `contact__inner ${contentDesktop}` }>
               <FormattedMessage id="contact-level">
                 {(message) => <h1 className="contact-level-title">{message}</h1>}
               </FormattedMessage>

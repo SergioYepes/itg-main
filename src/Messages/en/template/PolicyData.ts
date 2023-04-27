@@ -51,11 +51,11 @@ export const PolicyData = {
   "policy-Introduction-mobile": "Introdution",
   "policy-Definition-mobile": "Definitions",
   "policy-Values-mobile": "Values",
-  "policy-Treatment-mobile": "Treatment",
-  "policy-Duties-mobile":"Duties",
-  "policy-Rights-mobile": "Rights",
-  "policy-ResponsableArea-mobile":"Responsable Area",
-  "policy-TitularProcedure-mobile":"Titular Procedure",
-  "policy-Update-mobile": "Update",
+  "policy-Treatment-mobile": "Processing to which personal data will be subject",
+  "policy-Duties-mobile":"Duties of IT GLOBERS regarding the processing of personal data",
+  "policy-Rights-mobile": "Rights of data subjects",
+  "policy-ResponsableArea-mobile":"Area responsible for handling requests, inquiries, and complaints",
+  "policy-TitularProcedure-mobile":"Procedure for the exercise of data subjects' rights",
+  "policy-Update-mobile": "Validity, modifications and updates",
   
 };

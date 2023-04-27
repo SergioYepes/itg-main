@@ -11,7 +11,6 @@ import FormTextarea from '../atoms/FormTextarea';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { postEmail, Form as typeForm } from '../../../axios/emailPost';
 import LanguageContext from '../../../context/language';
-import { log } from 'console';
 
 function Form() {
   const { language } = useContext(LanguageContext);
@@ -134,7 +133,6 @@ function Form() {
           />
         )}
       </FormattedMessage>
-
       <FormattedMessage id='contact-position'>
         {message => (
           <input
@@ -147,9 +145,7 @@ function Form() {
           />
         )}
       </FormattedMessage>
-
       <PhoneInputWithSelect label='en' value={value} setValue={setValue} />
-
       <div className='container__select--services'>
         <select
           className='select--services'
